@@ -46,13 +46,8 @@ We will use the following technologies:
   Find out more at https://azure.microsoft.com/en-us/pricing/details/storage/files/
 
   ## Setting up
-Install pre-requisites:
+Install pre-requisites and set env variables:
 ```
 . .\Install-Prereqs.ps1
-```
-Set env variables:
-```
-Connect-MgGraph
-$env:AZURE_TENANT_ID=(Get-MgContext).TenantId
-$env:AZURE_CLIENT_ID=(Get-MgContext).ClientId
+. .\Set-EnvVariables.ps1
 ```
