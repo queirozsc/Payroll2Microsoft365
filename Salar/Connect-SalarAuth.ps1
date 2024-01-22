@@ -1,19 +1,27 @@
 ﻿#Authenticate to get the session token
 $SALAR_URI = 'https://clinicaamericas.salar10.net/api/Autenticacion/Autenticar'
-Write-Host "URI " $SALAR_URI
+Write-Host -Foreground Cyan "Connecting to " $SALAR_URI
 
 $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
 $headers.Add("Content-Type", "application/json")
 
 $postParam = @{
-    "IdEmpresa" = $env:SALAR_ID_EMPRESA
+    "IdEmpresa" = $env:SALAR_ID_EMPRESA + "0"
     "Cuenta" = $env:SALAR_CUENTA
     "Contrasena" = $env:SALAR_CONTRASENA
 }
 $body = ConvertTo-Json $postParam
-Write-Host "Body " $body
+#Write-Host "Body " $body
 
 $response = Invoke-RestMethod $SALAR_URI -Method 'POST' -Headers $headers -Body $body
 $response | ConvertTo-Json
-$env:SALAR_TOKEN = $response.Token
-Write-Host "Token " $env:SALAR_TOKEN
+if ($response.Exito) {
+    $env:SALAR_TOKEN = $response.Token
+    Write-Host -Foreground Green "Successfuly connected! Token " $env:SALAR_TOKEN
+} else {
+    Write-Host -Foreground Red "Error! " $response.Mensajes[0]
+    $body = $sentry.GetBaseRequestBody($response.Mensajes[0])
+    Write-Host $body
+    $event = $sentry.StoreEvent( $body )
+    Write-Host $event
+}

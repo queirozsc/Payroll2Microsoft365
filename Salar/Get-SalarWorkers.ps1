@@ -13,12 +13,13 @@ $postParam = @{
     "Cuenta" = $env:SALAR_CUENTA
     "Contrasena" = $env:SALAR_CONTRASENA
     #"Estado" = 2 # Status of worker (1 = Active / 2 = Inactive)
-    "FechaIngresoInicio" = "2024-01-01" # Start date, in format yyyy-mm-dd
-    "FechaIngresoFin" = "2024-01-31" # End date, in format yyyy-mm-dd
+    #"FechaIngresoInicio" = "2024-01-01" # Start date, in format yyyy-mm-dd
+    #"FechaIngresoFin" = "2024-01-31" # End date, in format yyyy-mm-dd
 
 }
 $body = ConvertTo-Json $postParam
 Write-Host "Body " $body
 
 $response = Invoke-RestMethod $SALAR_URI -Method 'POST' -Headers $headers -Body $body
-$response | ConvertTo-Json
+#$response | ConvertTo-Json
+$response | Select-Object -ExpandProperty Resultado | Where-Object { $_.PrimerNombre -eq "YOSELIN" }
