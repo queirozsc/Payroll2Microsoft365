@@ -1,4 +1,5 @@
-﻿function Set-AppCredential
+﻿#See more at https://learn.microsoft.com/en-us/powershell/microsoftgraph/app-only?view=graph-powershell-1.0
+function Set-AppCredential
 {
     Param(
         [Parameter(Mandatory)]

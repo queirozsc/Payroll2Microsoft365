@@ -6,7 +6,7 @@ $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
 $headers.Add("Content-Type", "application/json")
 
 $postParam = @{
-    "IdEmpresa" = $env:SALAR_ID_EMPRESA + "0"
+    "IdEmpresa" = $env:SALAR_ID_EMPRESA
     "Cuenta" = $env:SALAR_CUENTA
     "Contrasena" = $env:SALAR_CONTRASENA
 }
