@@ -20,8 +20,4 @@ if ($response.Exito) {
     Write-Host -Foreground Green "Successfuly connected! Token " $env:SALAR_TOKEN
 } else {
     Write-Host -Foreground Red "Error! " $response.Mensajes[0]
-    $body = $sentry.GetBaseRequestBody($response.Mensajes[0])
-    Write-Host $body
-    $event = $sentry.StoreEvent( $body )
-    Write-Host $event
 }

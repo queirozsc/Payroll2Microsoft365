@@ -32,17 +32,3 @@ if (Get-InstalledModule Microsoft.Graph) {
         exit
     }
 }
-
-#Install Sentry.io Powershell module
-if (Get-InstalledModule SentryPowershell) {
-    Update-Module SentryPowershell
-    Write-Host -ForegroundColor Green "Sentry Powersell version " (Get-InstalledModule Microsoft.Graph).Version.ToString() " installed"
-} else {
-    try {
-        Install-Module SentryPowershell
-    }
-    catch {
-        $_.message
-        exit
-    }
-}
