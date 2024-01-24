@@ -8,15 +8,15 @@
 .EXAMPLE
     Connect-Salar
 #>
-
-
-Function Connect-Salar {
+. $PSScriptRoot\..\Set-EnvVariables.ps1
+. $PSScriptRoot\..\Sentry\Send-SentryEvent.ps1
+function Connect-Salar {
     [CmdletBinding()]
-    Param (
+    param (
         
     )
     
-    Begin {
+    begin {
         $SALAR_URI = 'https://clinicaamericas.salar10.net/api/Autenticacion/Autenticar'
         $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
         $headers.Add("Content-Type", "application/json")
@@ -28,17 +28,22 @@ Function Connect-Salar {
         $body = ConvertTo-Json $postParam        
     }
     
-    Process {
-        $response = Invoke-RestMethod $SALAR_URI -Method 'POST' -Headers $headers -Body $body
+    process {
+        try {
+            $response = Invoke-RestMethod $SALAR_URI -Method 'POST' -Headers $headers -Body $body
+        }
+        catch {
+            Send-SentryEvent $response.Mensajes[0]
+        }
         if ($response.Exito) {
             $env:SALAR_TOKEN = $response.Token
-            Write-Host -Foreground Green "Successfuly connected! Token " $env:SALAR_TOKEN
+            Write-Host -Foreground Green "Successfuly connected to Salar! Token " $env:SALAR_TOKEN
         } else {
-            Write-Host -Foreground Red "Error! " $response.Mensajes[0]
+            Send-SentryEvent $response.Mensajes[0]
         }        
     }
     
-    End {
+    end {
         $response | ConvertTo-Json        
     }
 }

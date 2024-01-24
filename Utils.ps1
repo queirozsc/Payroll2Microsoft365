@@ -1,4 +1,17 @@
-﻿Function Generate-Usernames {
+﻿<#
+.SYNOPSIS
+    Generate a username from full name
+.DESCRIPTION
+    Generate username in format initial + father surname and username alternatives
+.NOTES
+    To avoid conflict with existing username, also generate alternatives usernames.
+    Important: to respect Bolivian's order of surnames, it's necessary use -Country parameter
+.EXAMPLE
+    Generate-Usernames "SERGIO CARVALHO QUEIROZ" # [squeiroz, scqueiroz]
+    Generate-Usernames -Fullname "Yersin Jacob Avalos Severiche" -Country "BOLIVIA" #[yavalos, yjavalos, yaavalos]
+#>
+
+Function Generate-Usernames {
     [CmdletBinding()]
     Param (
         [Parameter(Mandatory)]
@@ -30,6 +43,3 @@
         Return $Usernames
     }
 }
-
-Generate-Usernames("SERGIO CARVALHO QUEIROZ")
-Generate-Usernames -Fullname "Yersin Jacob Avalos Severiche" -Country "BOLIVIA"

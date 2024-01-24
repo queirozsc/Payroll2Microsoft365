@@ -1,4 +1,19 @@
-﻿#Install the NuGet provider
+﻿#Install Sentry.io Powershell module
+Write-Host -ForegroundColor Gray "Installing Sentry..."
+if (Get-InstalledModule SentryPowershell) {
+    Update-Module SentryPowershell
+    Write-Host -ForegroundColor Green "Sentry Powersell version $((Get-InstalledModule Microsoft.Graph).Version.ToString()) installed"
+} else {
+    try {
+        Install-Module SentryPowershell
+    }
+    catch {
+        $_.message
+        exit
+    }
+}
+
+#Install the NuGet provider
 Write-Host -ForegroundColor Gray "Installing NuGet..."
 if (Get-PackageProvider -Name NuGet) {
     Write-Host -ForegroundColor Green "NuGet version $((Get-PackageProvider -Name NuGet).Version.ToString()) installed"
@@ -38,6 +53,7 @@ if (Get-InstalledModule Microsoft.Graph) {
 }
 
 #Install Remote Server Administration Tools (RSAT)
+Write-Host -ForegroundColor Gray "Installing Remote Server Admistration Tools (RSAT)..."
 Add-WindowsCapability -Online -Name 'Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0'
 Get-WindowsCapability -Name RSAT* -Online | Select-Object -Property DisplayName, State
 Import-Module ActiveDirectory
