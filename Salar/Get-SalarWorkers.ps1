@@ -23,5 +23,5 @@ $body = ConvertTo-Json $postParam
 $worker = Invoke-RestMethod $SALAR_URI -Method 'POST' -Headers $headers -Body $body
 $worker `
     | Select-Object -ExpandProperty Resultado `
-    | Where-Object { $_.PrimerNombre -eq "SERGIO" }
+    | Where-Object { $_.PrimerNombre -eq "YERSIN" }
 $worker | Format-List
