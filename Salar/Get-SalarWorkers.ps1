@@ -2,7 +2,7 @@
 Write-Host "URI " $SALAR_URI
 
 $SALAR_AUTHORIZATION = "Bearer " + $env:SALAR_TOKEN
-Write-Host "Authorization" $SALAR_AUTHORIZATION
+#Write-Host "Authorization" $SALAR_AUTHORIZATION
 
 $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
 $headers.Add("Content-Type", "application/json")
@@ -18,8 +18,10 @@ $postParam = @{
 
 }
 $body = ConvertTo-Json $postParam
-Write-Host "Body " $body
+#Write-Host "Body " $body
 
-$response = Invoke-RestMethod $SALAR_URI -Method 'POST' -Headers $headers -Body $body
-#$response | ConvertTo-Json
-$response | Select-Object -ExpandProperty Resultado | Where-Object { $_.PrimerNombre -eq "YOSELIN" }
+$worker = Invoke-RestMethod $SALAR_URI -Method 'POST' -Headers $headers -Body $body
+$worker `
+    | Select-Object -ExpandProperty Resultado `
+    | Where-Object { $_.PrimerNombre -eq "SERGIO" }
+$worker | Format-List

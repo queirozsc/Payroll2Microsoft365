@@ -36,3 +36,8 @@ if (Get-InstalledModule Microsoft.Graph) {
         exit
     }
 }
+
+#Install Remote Server Administration Tools (RSAT)
+Add-WindowsCapability -Online -Name 'Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0'
+Get-WindowsCapability -Name RSAT* -Online | Select-Object -Property DisplayName, State
+Import-Module ActiveDirectory

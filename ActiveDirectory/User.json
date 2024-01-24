@@ -1,0 +1,135 @@
+﻿AccountExpirationDate                : 
+accountExpires                       : 9223372036854775807
+AccountLockoutTime                   : 
+AccountNotDelegated                  : False
+adminCount                           : 1
+AllowReversiblePasswordEncryption    : False
+AuthenticationPolicy                 : {}
+AuthenticationPolicySilo             : {}
+BadLogonCount                        : 0
+badPasswordTime                      : 133505736988175399
+badPwdCount                          : 0
+CannotChangePassword                 : False
+CanonicalName                        : clinicadelasamericas.com.bo/CDLA/Subsuelo/SS-TI/TI-Usuarios/Sergio Carvalho Queiroz
+Certificates                         : {}
+City                                 : 
+CN                                   : Sergio Carvalho Queiroz
+codePage                             : 0
+Company                              : Clinica De Las Américas
+CompoundIdentitySupported            : {False}
+Country                              : 
+countryCode                          : 0
+Created                              : 9/3/2022 17:30:33
+createTimeStamp                      : 9/3/2022 17:30:33
+Deleted                              : 
+Department                           : Gerencia De Operaciones
+Description                          : 
+directReports                        : {CN=Ivan Gabriel Miranda Duran,OU=TI-Usuarios,OU=SS-TI,OU=Subsuelo,OU=CDLA,DC=clinicadelasamericas,DC=com,DC=bo, CN=Yersin Jacob Avalos
+                                       Severiche,OU=TI,OU=PisoTres,OU=CDLA,DC=clinicadelasamericas,DC=com,DC=bo}
+DisplayName                          : Sergio Carvalho Queiroz
+DistinguishedName                    : CN=Sergio Carvalho Queiroz,OU=TI-Usuarios,OU=SS-TI,OU=Subsuelo,OU=CDLA,DC=clinicadelasamericas,DC=com,DC=bo
+Division                             : 
+DoesNotRequirePreAuth                : False
+dSCorePropagationData                : {8/9/2022 16:55:41, 8/9/2022 16:49:01, 9/8/2022 12:46:20, 30/5/2022 15:27:28…}
+EmailAddress                         : 
+EmployeeID                           : 
+EmployeeNumber                       : 
+Enabled                              : True
+Fax                                  : 
+GivenName                            : Sergio
+HomeDirectory                        : 
+HomedirRequired                      : False
+HomeDrive                            : 
+HomePage                             : 
+HomePhone                            : 
+Initials                             : 
+instanceType                         : 4
+isDeleted                            : 
+KerberosEncryptionType               : {None}
+LastBadPasswordAttempt               : 24/1/2024 08:41:38
+LastKnownParent                      : 
+lastLogoff                           : 0
+lastLogon                            : 133505842690734384
+LastLogonDate                        : 23/1/2024 08:29:20
+lastLogonTimestamp                   : 133504865600746503
+LockedOut                            : False
+lockoutTime                          : 0
+logonCount                           : 6796
+LogonWorkstations                    : 
+Manager                              : CN=Afonso Henrique Baldan,OU=Gerencia-Usuarios,OU=GERENCIA,OU=PisoTres,OU=CDLA,DC=clinicadelasamericas,DC=com,DC=bo
+MemberOf                             : {CN=Grupo_streaming,OU=TI-Grupos,OU=SS-TI,OU=Subsuelo,OU=CDLA,DC=clinicadelasamericas,DC=com,DC=bo,
+                                       CN=Grupo-InfraYTelecom,OU=CDLA,DC=clinicadelasamericas,DC=com,DC=bo, CN=Domain Admins,CN=Users,DC=clinicadelasamericas,DC=com,DC=bo, CN=Remote       
+                                       Management Users,CN=Builtin,DC=clinicadelasamericas,DC=com,DC=bo…}
+MNSLogonAccount                      : False
+MobilePhone                          : 
+Modified                             : 23/1/2024 08:29:20
+modifyTimeStamp                      : 23/1/2024 08:29:20
+mS-DS-ConsistencyGuid                : {125, 189, 10, 4…}
+msDS-KeyCredentialLink               : {B:854:000200002000019ADFD64E7596F6BB3525ABAFA72000A5A521BBFCA6D8320EF40F526C812962E8200002C5A0BDFFAE24B5AA91BC9D797F50EB6ED9B493177B20B45F62E96CD8C 
+                                       5C7B8691B0103525341310008000003000000000100000000000000000000010001C8794F4C21487317CCC9AA185183BFA6B2590B3DCB09E9A9F7FFE66B2451C81F7BC0F34C5F21F61EF 
+                                       52907E986F792524DD87954FED061A891EA2438EBAFA3508ABD709990C979A967DF0A1720D48C97D3CEE735C80790150786673EF3B2925E87626758C4AB81E08D6EA85477298530D5FBB 
+                                       26D9DE5853797D0F29D64285A50ADA3DE970DB990964D547F91681D5D91824D6A66165B3ECBEADFAAE502A0F1DC8D3C7458D2FA9289119EB1763700B040FFA050E94BA678971C85A788E 
+                                       332F1FE02EE6E9987FE90A02E313BF3E0928E2E0E69FC21A586F9D3DBA816F5B17A7BC51622AA081C978EF36984D83144838454BE35989EF128AF84C5207B73B432D14D0100040101000 
+                                       5011000066EC3863E0C73B4428EAF726FD6CB005F0F0007010000000002000000000000000000080008000000000000000008000979B5AF839203DA48:CN=Sergio Carvalho
+                                       Queiroz,OU=TI-Usuarios,OU=SS-TI,OU=Subsuelo,OU=CDLA,DC=clinicadelasamericas,DC=com,DC=bo, B:854:000200002000018C5E92D65C3998A800D6353B814758D341FAD5 
+                                       E0301A2018AC2023BD3999FFE3200002D79D3B36E1832D040EE8C5769B9F98A26E3849FDC195A389B6E202E1B58B2A4E1B01035253413100080000030000000001000000000000000000 
+                                       00010001C59FA2AAFA04AD8AB48E1DA568A51736864F6868CC2DB9A1BE3E8593BED2395331FFD96852E17B80421BCDA15DC94B537E2DFB2CC4F90EA1F04F4167C232BA28DF133CFB21F8 
+                                       69F598EBB2DAC3441A8292BCE10CBD501F6CC4862D540C0C894D838D1C425BC006480A4427FC426D0D91CD93B909BF4020160C649B64C3C164188DC307C34DB6841BDB76C4408AC140D2 
+                                       D517FAB9B31622EEFD7DE1CB0A01E1EC7FF5D95F7C518C972FB97E21CFAF34B4E8377D0F6FFFD14EF6AF3D75FBD0108A475B32BB3F40D3E624F8804B1E6AA9BFB9960BC25D3809A4E329 
+                                       F014DBF04E9DE475302AEDE3D83852E9DF700F76D1E322B4919968E587F2878C3023A032CAFB0100040101000501100006CA377AC89592B4469BB4E83D393404980F0007010000000002 
+                                       0000000000000000000800080000000000000000080009548B82A71A2DD948:CN=Sergio Carvalho
+                                       Queiroz,OU=TI-Usuarios,OU=SS-TI,OU=Subsuelo,OU=CDLA,DC=clinicadelasamericas,DC=com,DC=bo, B:854:0002000020000156D79982A6F2B188C7852159F2FD9F7DC0F18A 
+                                       AF3A4EE9245A05C4A0B1BF4FCE200002F862AF55970A1D25386997E5C36A1F4F635258C5AEBC4F72F123FE6795D265E21B01035253413100080000030000000001000000000000000000 
+                                       00010001D0CC8FE315398053E4A7300995C804F48234EED9B60CE6E638C6B617909578A3D3F2CC460599BB5851FDEB8934E99A26C742DF03DD5C9A0E678CE900F34138BC8C258F30744F 
+                                       8898FFCEC29A80F0D41FAF08C37BA20957A8D6D140BD59829582C3A473A9E7A18342AA2C5367504907725E1E54028413191E497B41DF3E844CD4F84FE54E3A546F567A939BBD622AAD70 
+                                       7E7397F5374FDA828A4ED098E114A97D7285D323DC78DB8A52AC029990C4F9B1780E703B831AEBB5767F3BB0B768C992BEFD681AAE3BC31079AC709ABFA828893308A8B48CC03E58729B 
+                                       EF76E9EEBAD8B680BDC61A3B07C71E02924DCDE78938C428949BD537FCA5AB8FD60161F9F1DB01000401010005011000068F1D8A301464AE4BA926B9ECAB74FD3C0F0007010000000002 
+                                       000000000000000000080008000000000000000008000961D5C9DE2A16D948:CN=Sergio Carvalho
+                                       Queiroz,OU=TI-Usuarios,OU=SS-TI,OU=Subsuelo,OU=CDLA,DC=clinicadelasamericas,DC=com,DC=bo}
+msDS-SupportedEncryptionTypes        : 0
+msDS-User-Account-Control-Computed   : 0
+Name                                 : Sergio Carvalho Queiroz
+nTSecurityDescriptor                 : System.DirectoryServices.ActiveDirectorySecurity
+ObjectCategory                       : CN=Person,CN=Schema,CN=Configuration,DC=clinicadelasamericas,DC=com,DC=bo
+ObjectClass                          : user
+ObjectGUID                           : 040abd7d-6ec1-4a81-899c-4de7c191c747
+objectSid                            : S-1-5-21-3702385606-1280255145-3786451197-1294
+Office                               : 
+OfficePhone                          : 
+Organization                         : 
+OtherName                            : 
+PasswordExpired                      : False
+PasswordLastSet                      : 10/1/2024 09:07:06
+PasswordNeverExpires                 : False
+PasswordNotRequired                  : False
+POBox                                : 
+PostalCode                           : 11604867
+PrimaryGroup                         : CN=Domain Users,CN=Users,DC=clinicadelasamericas,DC=com,DC=bo
+primaryGroupID                       : 513
+PrincipalsAllowedToDelegateToAccount : {}
+ProfilePath                          : 
+ProtectedFromAccidentalDeletion      : False
+pwdLastSet                           : 133493656264312602
+SamAccountName                       : squeiroz
+sAMAccountType                       : 805306368
+ScriptPath                           : 
+sDRightsEffective                    : 15
+ServicePrincipalNames                : {}
+SID                                  : S-1-5-21-3702385606-1280255145-3786451197-1294
+SIDHistory                           : {}
+SmartcardLogonRequired               : False
+sn                                   : Carvalho Queiroz
+State                                : 
+StreetAddress                        : 
+Surname                              : Carvalho Queiroz
+Title                                : Coordinador De Innovacion Integraciones Y Datos
+TrustedForDelegation                 : False
+TrustedToAuthForDelegation           : False
+UseDESKeyOnly                        : False
+userAccountControl                   : 512
+userCertificate                      : {}
+UserPrincipalName                    : squeiroz@clinicadelasamericas.com.bo
+uSNChanged                           : 337621407
+uSNCreated                           : 13724340
+whenChanged                          : 23/1/2024 08:29:20
+whenCreated                          : 9/3/2022 17:30:33
