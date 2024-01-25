@@ -1,22 +1,24 @@
 ﻿<#
 .SYNOPSIS
-    Generate a username from full name
+    Convert a full name in a list of usernames
 .DESCRIPTION
     Generate username in format initial + father surname and username alternatives
 .NOTES
     To avoid conflict with existing username, also generate alternatives usernames.
     Important: to respect Bolivian's order of surnames, it's necessary use -Country parameter
 .EXAMPLE
-    Generate-Usernames "SERGIO CARVALHO QUEIROZ" # [squeiroz, scqueiroz]
-    Generate-Usernames -Fullname "Yersin Jacob Avalos Severiche" -Country "BOLIVIA" #[yavalos, yjavalos, yaavalos]
+    Convert-Usernames "SERGIO CARVALHO QUEIROZ" 
+    # Returns [squeiroz, scqueiroz]
+    Convert-Usernames -Fullname "Yersin Jacob Avalos Severiche" -Country "BOLIVIA" 
+    # Returns [yavalos, yjavalos, yaavalos]
 #>
 
-Function Generate-Usernames {
+Function Convert-Usernames {
     [CmdletBinding()]
     Param (
-        [Parameter(Mandatory)]
+        [Parameter(Mandatory=$True, ValueFromPipeline=$True)]
         [string]$Fullname,
-        [Parameter()]
+        [Parameter(Mandatory=$False)]
         [string]$Country
     )
     
@@ -53,19 +55,20 @@ Function Generate-Usernames {
 
 <#
 .SYNOPSIS
-    Convert a string to title case, except prepositions
+    Format a string in title case, except prepositions
 .DESCRIPTION
-    Convert a string to title case, but prepositions in lower case
+    Format a string to title case, but prepositions in lower case
 .EXAMPLE
-    Convert-TitleCase "CLINICA METROPOLITANA DE LAS AMERICAS" # returns "Clinica Metropolitana de las Americas"
+    Format-TitleCase "CLINICA METROPOLITANA DE LAS AMERICAS" 
+    # Returns "Clinica Metropolitana de las Americas"
 #>
 
 
-function Convert-TitleCase {
+function Format-TitleCase {
     [CmdletBinding()]
     param (
         [CmdletBinding()]
-        [Parameter(Mandatory)]
+        [Parameter(Mandatory=$True, ValueFromPipeline=$True)]
         [string]$inputString
     )
     
@@ -118,25 +121,25 @@ function Convert-TitleCase {
 .NOTES
     In payroll system, the name of workes is stored in separated fields
 .EXAMPLE
-    Convert-FullName -FirstName SERGIO -FatherSurname CARVALHO -MotherSurname QUEIROZ
-    Returns "SERGIO CARVALHO QUEIROZ"
+    Join-FullName -FirstName SERGIO -FatherSurname CARVALHO -MotherSurname QUEIROZ
+    #Returns "SERGIO CARVALHO QUEIROZ"
 #>
 
 
-function Convert-Fullname {
+function Join-Fullname {
     [CmdletBinding()]
     param (
-        [Parameter(Mandatory)]
+        [Parameter(Mandatory=$True)]
         [string]$FirstName,
-        [Parameter()]
+        [Parameter(Mandatory=$False)]
         [string]$SecondName,
-        [Parameter()]
+        [Parameter(Mandatory=$False)]
         [string]$ThirdName,
-        [Parameter()]
+        [Parameter(Mandatory=$False)]
         [string]$FatherSurname,
-        [Parameter()]
+        [Parameter(Mandatory=$False)]
         [string]$MotherSurname,
-        [Parameter()]
+        [Parameter(Mandatory=$False)]
         [string]$MarriedSurname
     )
     begin {

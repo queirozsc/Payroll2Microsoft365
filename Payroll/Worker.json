@@ -1,0 +1,320 @@
+﻿Worker (BO):
+
+PrimerNombre                : YOSELIN
+SegundoNombre               : 
+TercerNombre                : 
+ApellidoPaterno             : VILLARROEL
+ApellidoMaterno             : MERCADO
+ApellidoCasada              : 
+NumeroDocumento             : 9661676
+ExtensionDocumento          : SC
+TipoDocumento               : CI
+AdicionalSegip              : 
+VencimientoDocumento        : 2021-07-23
+FechaNacimiento             : 1997-04-24
+NombrePadre                 : Wilson Villarroel Serrano
+NombreMadre                 : Janeth Marisol Mercado Guevara
+PaisNacionalidad            : BOLIVIA
+NacionalidadBoliviana       : S
+LugarNacimiento             : SANTA CRUZ DE LA SIERRA
+Sexo                        : F
+EstadoCivil                 : 1
+LicenciaConducir            : 
+VencimientoLicencia         : 
+TelefonoFijoPersonal        : 
+TelefonoMovilPersonal       : 63466252
+ContactoEmergencia          : JANETH MARISOL MERCADO GUEVARA
+TelefonoContactoEmergencia  : 79012991
+RelacionContactoEmergencia  : MADRE
+DireccionContactoEmergencia : 8VO ANILLO, AV. ALEMANA. BARRIO RETOÑO, CALLE PRINCIPAL N° 8328
+Ciudad                      : Santa Cruz de la Sierra
+DireccionPersonal           : 8VO ANILLO, AV. ALEMANA. BARRIO RETOÑO, CALLE PRINCIPAL N° 8328
+ZonaDireccionPersonal       : NORTE
+ProfesionOficio             : EGRESADA DE PSICOLOGÍA
+MatriculaProfesional        : 
+CorreoPersonal              : yoselin.villarroel24@gmail.com
+TipoSangre                  : 4
+FactorSangre                : 1
+NombreConyuge               : 
+TelefonoConyuge             : 
+DocumentoIdentidadConyuge   : 
+LugarTrabajoConyuge         : 
+FechaNacimientoConyuge      : 
+CodigoColaborador           : 9661676
+FechaIngreso                : 2021-02-08
+NumeroContrato              : 
+UnidadOrganizativa          : Gerencia general
+Oficina                     : 01
+IdCargo                     : 1338
+Cargo                       : ANALISTA DE TALENTO HUMANO
+CargoPlanillas              : ANALISTA DE TALENTO HUMANO
+ColaboradorSuperior         : 
+UnidadesNegocio             : {@{Codigo=002; Porcentaje=1}}
+Divisiones                  : {@{Codigo=GERENCIA ADMINISTRATIVA Y FINANCIERA; Porcentaje=1}}
+CentrosCosto                : {@{Codigo=Talento Humano; Porcentaje=1}}
+TelefonoFijoLaboral         : 
+TelefonoMovilLaboral        : 
+CorreoLaboral               : yvillarroel@clinicadelasamericas.com.bo
+DireccionLaboral            : AV. SEXTO ANILLO ESQ. AV. PROLONGACIÓN BENI N°5100
+ModalidadContrato           : Tiempo indefinido
+TipoContrato                : Escrito
+MotivoContratoPlazoFijo     : Proyecto Implementación sistema de reclutamiento y selección de personal CMDLA
+FechaFinContratoPlazoFijo   : 
+FechaRatificacion           : 
+CodigoDependienteRCIVA      : 9661676016
+FormaPago                   : Banco
+CuentaBancaria              : 1311033890
+Banco                       : Ganadero
+AdministradoraPensiones     : Gestora pública
+NumeroUnicoAsignado         : 48550292
+NumeroAseguradoCaja         : 97-5424-VMY
+DatosPersonalizados         : {@{NombreDato=Área; Valor=TALENTO HUMANO}, @{NombreDato=Enfermedades de Base; Valor=Ninguna}, @{NombreDato=Ubicación Laboral; Valor=3er Piso
+                              Administrativos}, @{NombreDato=Sub Área; Valor=SELECCIÓN}…}
+HaberBasico                 : 
+FechaCambioHaberBasico      : 
+Estado                      : Activo
+FechaRetiro                 : 
+CodigoAsistencia            : 9661676
+Superior                    : {@{Codigo=5849099; Nombre=ALBARRACIN GUTIERREZ GABRIELA; Cargo=JEFE DE TALENTO HUMANO; Cuenta=5849099}}
+Superior2                   : {@{Codigo=5375013; Nombre=AÑEZ CASTEDO ADOLFO; Cargo=GERENTE ADMINISTRATIVO FINANCIERO; Cuenta=5375013}}
+
+==================
+Manager:
+
+PrimerNombre                : GABRIELA
+SegundoNombre               : 
+TercerNombre                : 
+ApellidoPaterno             : ALBARRACIN
+ApellidoMaterno             : GUTIERREZ
+ApellidoCasada              : 
+NumeroDocumento             : 5849099
+ExtensionDocumento          : SC
+TipoDocumento               : CI
+AdicionalSegip              : 
+VencimientoDocumento        : 2024-05-15
+FechaNacimiento             : 1986-05-16
+NombrePadre                 : 
+NombreMadre                 : 
+PaisNacionalidad            : BOLIVIA
+NacionalidadBoliviana       : S
+LugarNacimiento             : LA PAZ - MURILLO- NUESTRA SEÑORA DE LA PAZ
+Sexo                        : F
+EstadoCivil                 : 2
+LicenciaConducir            : 
+VencimientoLicencia         : 
+TelefonoFijoPersonal        : 
+TelefonoMovilPersonal       : 76628533
+ContactoEmergencia          : VICTOR FULVIO GARCIA RIVERO
+TelefonoContactoEmergencia  : 75074746
+RelacionContactoEmergencia  : ESPOSO
+DireccionContactoEmergencia : URBANIZACION AKUALAND BISA CALLE 12
+Ciudad                      : Santa Cruz de la Sierra
+DireccionPersonal           : URBANIZACIÓN AKUALAND BISA CALLE 12
+ZonaDireccionPersonal       : Warnes
+ProfesionOficio             : LICENCIATURA AUDITORIA FINANCIERA
+MatriculaProfesional        : 
+CorreoPersonal              : galbarracin@clinicadelasamericas.com.bo
+TipoSangre                  : 4
+FactorSangre                : 1
+NombreConyuge               : Víctor Fulvio García Rivero
+TelefonoConyuge             : 
+DocumentoIdentidadConyuge   : 
+LugarTrabajoConyuge         : 
+FechaNacimientoConyuge      : 
+CodigoColaborador           : 5849099
+FechaIngreso                : 2021-03-06
+NumeroContrato              : 
+UnidadOrganizativa          : Gerencia general
+Oficina                     : 01
+IdCargo                     : 1117
+Cargo                       : JEFE DE TALENTO HUMANO
+CargoPlanillas              : JEFE DE TALENTO HUMANO
+ColaboradorSuperior         : 
+UnidadesNegocio             : {@{Codigo=002; Porcentaje=1}}
+Divisiones                  : {@{Codigo=GERENCIA ADMINISTRATIVA Y FINANCIERA; Porcentaje=1}}
+CentrosCosto                : {@{Codigo=Talento Humano; Porcentaje=1}}
+TelefonoFijoLaboral         : 
+TelefonoMovilLaboral        : 
+CorreoLaboral               : galbarracin@clinicadelasamericas.com.bo
+DireccionLaboral            : AV. SEXTO ANILLO ESQ. AV. PROLONGACIÓN BENI N°5100
+ModalidadContrato           : Tiempo indefinido
+TipoContrato                : Escrito
+MotivoContratoPlazoFijo     : 
+FechaFinContratoPlazoFijo   : 
+FechaRatificacion           : 
+CodigoDependienteRCIVA      : 5849099017
+FormaPago                   : Banco
+CuentaBancaria              : 1310824865
+Banco                       : Ganadero
+AdministradoraPensiones     : Gestora pública
+NumeroUnicoAsignado         : 38629720
+NumeroAseguradoCaja         : 86-5516-AGG
+DatosPersonalizados         : {@{NombreDato=Área; Valor=TALENTO HUMANO}, @{NombreDato=Enfermedades de Base; Valor=Ninguna}, @{NombreDato=Ubicación Laboral; Valor=3er Piso
+                              Administrativos}, @{NombreDato=Sub Área; Valor=REMUNERACIONES}…}
+HaberBasico                 : 
+FechaCambioHaberBasico      : 
+Estado                      : Activo
+FechaRetiro                 : 
+CodigoAsistencia            : 5849099
+Superior                    : {@{Codigo=5375013; Nombre=AÑEZ CASTEDO ADOLFO; Cargo=GERENTE ADMINISTRATIVO FINANCIERO; Cuenta=5375013}}
+Superior2                   : {@{Codigo=11605546; Nombre=DE ALMEIDA MOREIRA TELES FELIPE; Cargo=RESPONSABLE MÉDICO; Cuenta=11605546}}
+
+============
+Worker (foreigner):
+
+PrimerNombre                : SERGIO
+SegundoNombre               : 
+TercerNombre                : 
+ApellidoPaterno             : CARVALHO
+ApellidoMaterno             : QUEIROZ
+ApellidoCasada              : 
+NumeroDocumento             : 11604867
+ExtensionDocumento          : SC
+TipoDocumento               : CE
+AdicionalSegip              : 
+VencimientoDocumento        : 2022-11-04
+FechaNacimiento             : 1978-03-27
+NombrePadre                 : Jose Claudimir Moura Queiroz
+NombreMadre                 : Marias das Dores Carvalho Queiroz
+PaisNacionalidad            : BRASIL
+NacionalidadBoliviana       : N
+LugarNacimiento             : SAO LUIS
+Sexo                        : M
+EstadoCivil                 : 1
+LicenciaConducir            : 
+VencimientoLicencia         : 
+TelefonoFijoPersonal        : 
+TelefonoMovilPersonal       : 763-24985
+ContactoEmergencia          : Chiara da Silva Queiroz
+TelefonoContactoEmergencia  : +55 27 99710-1809
+RelacionContactoEmergencia  : Hija
+DireccionContactoEmergencia : RUA MARIA ELEONORA PEREIRA, 1101, APT 401, JARDIM DA PENHA, VITÓRIA, ESPÍRITO SANTO, BRASIL
+Ciudad                      : Santa Cruz de la Sierra
+DireccionPersonal           : AVENIDA SALVADOR, 110, EDIFICIO YOU, TORRE 2, DEPARTAMENTO 204, EQUIPETROL
+ZonaDireccionPersonal       : Oeste
+ProfesionOficio             : BACHILLER EN CIENCIAS DE LA COMPUTACION
+MatriculaProfesional        : 
+CorreoPersonal              : queirozsc@gmail.com
+TipoSangre                  : 4
+FactorSangre                : 1
+NombreConyuge               : 
+TelefonoConyuge             : 
+DocumentoIdentidadConyuge   : 
+LugarTrabajoConyuge         : 
+FechaNacimientoConyuge      : 
+CodigoColaborador           : 11604867
+FechaIngreso                : 2021-01-01
+NumeroContrato              : 
+UnidadOrganizativa          : Gerencia general
+Oficina                     : 01
+IdCargo                     : 1216
+Cargo                       : COORDINADOR DE INNOVACIÓN INTEGRACIONES Y DATOS
+CargoPlanillas              : COORDINADOR DE INNOVACIÓN INTEGRACIONES Y DATOS
+ColaboradorSuperior         : 
+UnidadesNegocio             : {@{Codigo=001; Porcentaje=1}}
+Divisiones                  : {@{Codigo=GERENCIA DE OPERACIONES; Porcentaje=1}}
+CentrosCosto                : {@{Codigo=Sistemas; Porcentaje=1}}
+TelefonoFijoLaboral         : 
+TelefonoMovilLaboral        : 
+CorreoLaboral               : squeiroz@clinicadelasamericas.com.bo
+DireccionLaboral            : AV. SEXTO ANILLO ESQ. AV. PROLONGACIÓN BENI N°5100
+ModalidadContrato           : A plazo fijo
+TipoContrato                : Escrito
+MotivoContratoPlazoFijo     : Proyecto Lider de Implementación HIS de IT
+FechaFinContratoPlazoFijo   : 2022-11-04
+FechaRatificacion           : 
+CodigoDependienteRCIVA      : 11604867019
+FormaPago                   : Banco
+CuentaBancaria              : 1311032972
+Banco                       : Ganadero
+AdministradoraPensiones     : Gestora pública
+NumeroUnicoAsignado         : 48540584
+NumeroAseguradoCaja         : 78-0327-CQS
+DatosPersonalizados         : {@{NombreDato=Área; Valor=TI Y PROYECTOS}, @{NombreDato=Enfermedades de Base; Valor=Ninguna}, @{NombreDato=Ubicación Laboral; Valor=3er Piso
+                              Administrativos}, @{NombreDato=Riesgo Ergonómico; Valor=Ergonómico}…}
+HaberBasico                 : 
+FechaCambioHaberBasico      : 
+Estado                      : Activo
+FechaRetiro                 : 
+CodigoAsistencia            : 11604867
+Superior                    : {}
+Superior2                   : {@{Codigo=11605546; Nombre=DE ALMEIDA MOREIRA TELES FELIPE; Cargo=RESPONSABLE MÉDICO; Cuenta=11605546}}
+
+####
+PrimerNombre                : YERSIN
+SegundoNombre               : JACOB
+TercerNombre                : 
+ApellidoPaterno             : AVALOS
+ApellidoMaterno             : SEVERICHE
+ApellidoCasada              : 
+NumeroDocumento             : 8118005
+ExtensionDocumento          : SC
+TipoDocumento               : CI
+AdicionalSegip              : 
+VencimientoDocumento        : 2024-08-24
+FechaNacimiento             : 1996-06-04
+NombrePadre                 : 
+NombreMadre                 : 
+PaisNacionalidad            : BOLIVIA
+NacionalidadBoliviana       : S
+LugarNacimiento             : SANTA CRUZ
+Sexo                        : M
+EstadoCivil                 : 2
+LicenciaConducir            : 
+VencimientoLicencia         : 
+TelefonoFijoPersonal        : 
+TelefonoMovilPersonal       : 75589553
+ContactoEmergencia          : 
+TelefonoContactoEmergencia  : 
+RelacionContactoEmergencia  : 
+DireccionContactoEmergencia : 
+Ciudad                      : Santa Cruz de la Sierra
+DireccionPersonal           : CONDOMINIO LOS PORTALES CALLE LEMOINE N° 440
+ZonaDireccionPersonal       : 
+ProfesionOficio             : LIC. EN INGENIERIA EN REDES Y TELECOMUNICACIONES
+MatriculaProfesional        : 
+CorreoPersonal              : yersin.avalos@gmail.com
+TipoSangre                  : 4
+FactorSangre                : 1
+NombreConyuge               : 
+TelefonoConyuge             : 
+DocumentoIdentidadConyuge   : 
+LugarTrabajoConyuge         : 
+FechaNacimientoConyuge      : 
+CodigoColaborador           : 8118005
+FechaIngreso                : 2023-03-14
+NumeroContrato              : 
+UnidadOrganizativa          : Gerencia general
+Oficina                     : 01
+IdCargo                     : 1244
+Cargo                       : ANALISTA DE BI
+CargoPlanillas              : ANALISTA DE BI
+ColaboradorSuperior         : 
+UnidadesNegocio             : {@{Codigo=002; Porcentaje=1}}
+Divisiones                  : {@{Codigo=GERENCIA DE OPERACIONES; Porcentaje=1}}
+CentrosCosto                : {@{Codigo=Calidad y proceso; Porcentaje=1}}
+TelefonoFijoLaboral         : 
+TelefonoMovilLaboral        : 
+CorreoLaboral               : 
+DireccionLaboral            : AV. SEXTO ANILLO ESQ. AV. PROLONGACIÓN BENI N°5100
+ModalidadContrato           : Tiempo indefinido
+TipoContrato                : Escrito
+MotivoContratoPlazoFijo     : REEMPLAZO.
+FechaFinContratoPlazoFijo   : 
+FechaRatificacion           : 
+CodigoDependienteRCIVA      : 8118005012
+FormaPago                   : Banco
+CuentaBancaria              : 1311033156
+Banco                       : Ganadero
+AdministradoraPensiones     : Gestora pública
+NumeroUnicoAsignado         : 48303136
+NumeroAseguradoCaja         : 96-0604-ASY
+DatosPersonalizados         : {@{NombreDato=Área; Valor=TI Y PROYECTOS}, @{NombreDato=Enfermedades de Base; Valor=Ninguna}, @{NombreDato=Ubicación Laboral;
+                              Valor=3er Piso Administrativos}, @{NombreDato=Riesgo Ergonómico; Valor=Ergonómico}…}
+HaberBasico                 : 
+FechaCambioHaberBasico      : 
+Estado                      : Activo
+FechaRetiro                 : 
+CodigoAsistencia            : 8118005
+Superior                    : {@{Codigo=11604867; Nombre=CARVALHO QUEIROZ SERGIO; Cargo=COORDINADOR DE INNOVACIÓN INTEGRACIONES Y DATOS; Cuenta=11604867}}
+Superior2                   : {}

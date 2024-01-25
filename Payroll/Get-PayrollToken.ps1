@@ -3,21 +3,22 @@
     Connects to Salar API to get token
 .DESCRIPTION
     Connects to Salar API and stores token return in env variable for further use
-.NOTES
-    It's necessary to set env variables before run
 .EXAMPLE
-    Connect-Salar
+    Get-PayrollToken
 #>
-. $PSScriptRoot\..\Set-EnvVariables.ps1
+. $PSScriptRoot\..\Set-Variables.ps1
 . $PSScriptRoot\..\Sentry\Send-SentryEvent.ps1
-function Connect-Salar {
+function Get-PayrollToken {
     [CmdletBinding()]
     param (
         
     )
     
     begin {
+        # API URI for authentication
         $SALAR_URI = 'https://clinicaamericas.salar10.net/api/Autenticacion/Autenticar'
+        
+        # Prepare POST message
         $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
         $headers.Add("Content-Type", "application/json")
         $postParam = @{
@@ -30,22 +31,25 @@ function Connect-Salar {
     
     process {
         try {
+            # Invoke API for authentication
+            Write-Verbose "Connecting to $SALAR_URI ..."
             $response = Invoke-RestMethod $SALAR_URI -Method 'POST' -Headers $headers -Body $body
         }
         catch {
+            # Send error to Sentry.io
             Send-SentryEvent $response.Mensajes[0]
         }
+        # If successfull, store token for further use
         if ($response.Exito) {
             $env:SALAR_TOKEN = $response.Token
-            Write-Host -Foreground Green "Successfuly connected to Salar! Token " $env:SALAR_TOKEN
+            Write-Verbose "Token: $env:SALAR_TOKEN"
         } else {
+            # Send error to Sentry.io
             Send-SentryEvent $response.Mensajes[0]
         }        
     }
     
     end {
-        $response | ConvertTo-Json        
+        return $response.Token    
     }
 }
-
-Connect-Salar

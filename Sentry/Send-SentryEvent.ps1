@@ -28,6 +28,7 @@ function Send-SentryEvent {
     process {
         $body = $sentry.GetBaseRequestBody($Message)
         $event = $sentry.StoreEvent($body)
+        Write-Error $Message
     }
     
     end {
