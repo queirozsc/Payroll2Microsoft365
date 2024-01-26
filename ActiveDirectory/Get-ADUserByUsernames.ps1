@@ -32,7 +32,12 @@ function Get-ADUserByUsernames {
             foreach ($Username in $Usernames) {
                 # Search Active Directory by account name
                 Write-Verbose "Searching on $env:AD_SERVER_NAME for Username $Username ..."
-                $ADUser = Get-ADUser -Filter { SamAccountName -eq $Username}
+                try {
+                    $ADUser = Get-ADUser -Filter { SamAccountName -eq $Username}
+                }
+                catch {
+                    Send-SentryEvent $_.Exception.Message
+                }
 
                 if ($ADUser) {
                     # Double check user by full name
