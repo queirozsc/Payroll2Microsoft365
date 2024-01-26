@@ -1,6 +1,6 @@
 ﻿Variables.env
 GraphCertificate.pfx
 GraphCertificate.cer
-Salar/Worker.json
+Payroll/Worker.json
+Payroll/PayrollEmployees.txt
 MicrosoftGraph/Microsoft365User.json
-Data/PayrollEmployees.txt

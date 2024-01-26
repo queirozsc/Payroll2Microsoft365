@@ -1,0 +1,540 @@
+
+PrimerNombre                : ANDREA
+SegundoNombre               : RENATA
+TercerNombre                : 
+ApellidoPaterno             : ESTRADA
+ApellidoMaterno             : TORREZ
+ApellidoCasada              : 
+NumeroDocumento             : 9812413
+ExtensionDocumento          : SC
+TipoDocumento               : CI
+AdicionalSegip              : 
+VencimientoDocumento        : 2029-01-09
+FechaNacimiento             : 1998-08-05
+NombrePadre                 : 
+NombreMadre                 : 
+PaisNacionalidad            : BOLIVIA
+NacionalidadBoliviana       : S
+LugarNacimiento             : 
+Sexo                        : F
+EstadoCivil                 : 1
+LicenciaConducir            : 
+VencimientoLicencia         : 
+TelefonoFijoPersonal        : 
+TelefonoMovilPersonal       : 69090712
+ContactoEmergencia          : 
+TelefonoContactoEmergencia  : 
+RelacionContactoEmergencia  : 
+DireccionContactoEmergencia : 
+Ciudad                      : Santa Cruz de la Sierra
+DireccionPersonal           : Urb. España C/Lopez de Vega C/3
+ZonaDireccionPersonal       : 
+ProfesionOficio             : 
+MatriculaProfesional        : 
+CorreoPersonal              : 
+TipoSangre                  : 
+FactorSangre                : 
+NombreConyuge               : 
+TelefonoConyuge             : 
+DocumentoIdentidadConyuge   : 
+LugarTrabajoConyuge         : 
+FechaNacimientoConyuge      : 
+CodigoColaborador           : 9812413
+FechaIngreso                : 2024-01-09
+NumeroContrato              : 
+UnidadOrganizativa          : Gerencia general
+Oficina                     : 01
+IdCargo                     : 1292
+Cargo                       : AUXILIAR DE RECEPCION Y TELEFONISTAS - JHENNY
+CargoPlanillas              : AUXILIAR DE RECEPCION Y TELEFONISTAS
+ColaboradorSuperior         : 
+UnidadesNegocio             : {@{Codigo=003; Porcentaje=1}}
+Divisiones                  : {@{Codigo=GERENCIA DE OPERACIONES; Porcentaje=1}}
+CentrosCosto                : {@{Codigo=Admisiones y Recepcion; Porcentaje=1}}
+TelefonoFijoLaboral         : 
+TelefonoMovilLaboral        : 
+CorreoLaboral               : 
+DireccionLaboral            : 
+ModalidadContrato           : Tiempo indefinido
+TipoContrato                : Escrito
+MotivoContratoPlazoFijo     : 
+FechaFinContratoPlazoFijo   : 
+FechaRatificacion           : 
+CodigoDependienteRCIVA      : 9812413013
+FormaPago                   : Banco
+CuentaBancaria              : 1310428727
+Banco                       : Ganadero
+AdministradoraPensiones     : Gestora pública
+NumeroUnicoAsignado         : 
+NumeroAseguradoCaja         : 
+DatosPersonalizados         : {@{NombreDato=Área; Valor=FLUJO DEL PACIENTE}, @{NombreDato=Riesgo Ergonómico; Valor=Ergonómico}, @{NombreDato=GASTO/COSTO; Valor=COSTO}, @{NombreDato=UNIDAD FUNCIONAL; Valor=CC COMPARTIDO}}
+HaberBasico                 : 
+FechaCambioHaberBasico      : 
+Estado                      : Activo
+FechaRetiro                 : 
+CodigoAsistencia            : 9812413
+Superior                    : {@{Codigo=3898391; Nombre=AGUILERA GARCIA JENNY PAOLA; Cargo=COORDINADOR DE CONTROL DE GESTIÓN; Cuenta=3898391}}
+Superior2                   : {@{Codigo=11605546; Nombre=DE ALMEIDA MOREIRA TELES FELIPE; Cargo=RESPONSABLE MÉDICO; Cuenta=11605546}}
+
+PrimerNombre                : SELENE
+SegundoNombre               : PATRICIA
+TercerNombre                : 
+ApellidoPaterno             : GARECA
+ApellidoMaterno             : LOPEZ
+ApellidoCasada              : 
+NumeroDocumento             : 6250349
+ExtensionDocumento          : SC
+TipoDocumento               : CI
+AdicionalSegip              : 
+VencimientoDocumento        : 2032-10-07
+FechaNacimiento             : 1995-08-06
+NombrePadre                 : 
+NombreMadre                 : 
+PaisNacionalidad            : BOLIVIA
+NacionalidadBoliviana       : S
+LugarNacimiento             : 
+Sexo                        : F
+EstadoCivil                 : 1
+LicenciaConducir            : 
+VencimientoLicencia         : 
+TelefonoFijoPersonal        : 
+TelefonoMovilPersonal       : 79007483
+ContactoEmergencia          : 
+TelefonoContactoEmergencia  : 
+RelacionContactoEmergencia  : 
+DireccionContactoEmergencia : 
+Ciudad                      : Santa Cruz de la Sierra
+DireccionPersonal           : B/La Colorada C/8
+ZonaDireccionPersonal       : 
+ProfesionOficio             : 
+MatriculaProfesional        : 
+CorreoPersonal              : 
+TipoSangre                  : 
+FactorSangre                : 
+NombreConyuge               : 
+TelefonoConyuge             : 
+DocumentoIdentidadConyuge   : 
+LugarTrabajoConyuge         : 
+FechaNacimientoConyuge      : 
+CodigoColaborador           : 6250349
+FechaIngreso                : 2024-01-09
+NumeroContrato              : 
+UnidadOrganizativa          : Gerencia general
+Oficina                     : 01
+IdCargo                     : 1292
+Cargo                       : AUXILIAR DE RECEPCION Y TELEFONISTAS - JHENNY
+CargoPlanillas              : AUXILIAR DE RECEPCION Y TELEFONISTAS
+ColaboradorSuperior         : 
+UnidadesNegocio             : {@{Codigo=003; Porcentaje=1}}
+Divisiones                  : {@{Codigo=GERENCIA DE OPERACIONES; Porcentaje=1}}
+CentrosCosto                : {@{Codigo=Admisiones y Recepcion; Porcentaje=1}}
+TelefonoFijoLaboral         : 
+TelefonoMovilLaboral        : 
+CorreoLaboral               : 
+DireccionLaboral            : 
+ModalidadContrato           : Tiempo indefinido
+TipoContrato                : Escrito
+MotivoContratoPlazoFijo     : 
+FechaFinContratoPlazoFijo   : 
+FechaRatificacion           : 
+CodigoDependienteRCIVA      : 6250349012
+FormaPago                   : Banco
+CuentaBancaria              : 0000000000000000000
+Banco                       : Ganadero
+AdministradoraPensiones     : Gestora pública
+NumeroUnicoAsignado         : 50130894
+NumeroAseguradoCaja         : 
+DatosPersonalizados         : {@{NombreDato=Área; Valor=FLUJO DEL PACIENTE}, @{NombreDato=Riesgo Ergonómico; Valor=Ergonómico}, @{NombreDato=GASTO/COSTO; Valor=COSTO}, @{NombreDato=UNIDAD FUNCIONAL; Valor=CC COMPARTIDO}}
+HaberBasico                 : 
+FechaCambioHaberBasico      : 
+Estado                      : Activo
+FechaRetiro                 : 
+CodigoAsistencia            : 6250349
+Superior                    : {@{Codigo=3898391; Nombre=AGUILERA GARCIA JENNY PAOLA; Cargo=COORDINADOR DE CONTROL DE GESTIÓN; Cuenta=3898391}}
+Superior2                   : {@{Codigo=11605546; Nombre=DE ALMEIDA MOREIRA TELES FELIPE; Cargo=RESPONSABLE MÉDICO; Cuenta=11605546}}
+
+PrimerNombre                : CARLOS
+SegundoNombre               : MAURICIO
+TercerNombre                : 
+ApellidoPaterno             : GOMEZ
+ApellidoMaterno             : MARPARTIDA
+ApellidoCasada              : 
+NumeroDocumento             : 5613577
+ExtensionDocumento          : BN
+TipoDocumento               : CI
+AdicionalSegip              : 
+VencimientoDocumento        : 2025-09-30
+FechaNacimiento             : 1986-10-23
+NombrePadre                 : 
+NombreMadre                 : 
+PaisNacionalidad            : BOLIVIA
+NacionalidadBoliviana       : S
+LugarNacimiento             : 
+Sexo                        : M
+EstadoCivil                 : 1
+LicenciaConducir            : 
+VencimientoLicencia         : 
+TelefonoFijoPersonal        : 
+TelefonoMovilPersonal       : 78108100
+ContactoEmergencia          : 
+TelefonoContactoEmergencia  : 
+RelacionContactoEmergencia  : 
+DireccionContactoEmergencia : 
+Ciudad                      : Santa Cruz de la Sierra
+DireccionPersonal           : C/Velasco N° 657 Z. Central
+ZonaDireccionPersonal       : 
+ProfesionOficio             : 
+MatriculaProfesional        : 
+CorreoPersonal              : 
+TipoSangre                  : 
+FactorSangre                : 
+NombreConyuge               : 
+TelefonoConyuge             : 
+DocumentoIdentidadConyuge   : 
+LugarTrabajoConyuge         : 
+FechaNacimientoConyuge      : 
+CodigoColaborador           : 5613577
+FechaIngreso                : 2024-01-09
+NumeroContrato              : 
+UnidadOrganizativa          : Gerencia general
+Oficina                     : 01
+IdCargo                     : 1358
+Cargo                       : COORDINADOR DE CAPTACIÓN MÉDICA
+CargoPlanillas              : COORDINADOR DE CAPTACIÓN MÉDICA
+ColaboradorSuperior         : 
+UnidadesNegocio             : {@{Codigo=002; Porcentaje=1}}
+Divisiones                  : {@{Codigo=GERENCIA COMERCIAL; Porcentaje=1}}
+CentrosCosto                : {@{Codigo=Comercial y Marketing; Porcentaje=1}}
+TelefonoFijoLaboral         : 
+TelefonoMovilLaboral        : 
+CorreoLaboral               : 
+DireccionLaboral            : 
+ModalidadContrato           : Tiempo indefinido
+TipoContrato                : Escrito
+MotivoContratoPlazoFijo     : 
+FechaFinContratoPlazoFijo   : 
+FechaRatificacion           : 
+CodigoDependienteRCIVA      : 5613577018
+FormaPago                   : Banco
+CuentaBancaria              : 1311322732
+Banco                       : Ganadero
+AdministradoraPensiones     : Gestora pública
+NumeroUnicoAsignado         : 39980558
+NumeroAseguradoCaja         : 
+DatosPersonalizados         : {@{NombreDato=Área; Valor=COMERCIAL}, @{NombreDato=Riesgo Ergonómico; Valor=Ergonómico}, @{NombreDato=GASTO/COSTO; Valor=COSTO}, @{NombreDato=UNIDAD FUNCIONAL; Valor=CC COMPARTIDO}}
+HaberBasico                 : 
+FechaCambioHaberBasico      : 
+Estado                      : Activo
+FechaRetiro                 : 
+CodigoAsistencia            : 5613577
+Superior                    : {@{Codigo=3260945; Nombre=SOLIZ PAZ JULIO CESAR; Cargo=GERENTE COMERCIAL; Cuenta=3260945}}
+Superior2                   : {@{Codigo=11605546; Nombre=DE ALMEIDA MOREIRA TELES FELIPE; Cargo=RESPONSABLE MÉDICO; Cuenta=11605546}}
+
+PrimerNombre                : MARIA
+SegundoNombre               : ALEXANDRA
+TercerNombre                : 
+ApellidoPaterno             : JAVIER
+ApellidoMaterno             : ABALOS
+ApellidoCasada              : 
+NumeroDocumento             : 5402945
+ExtensionDocumento          : SC
+TipoDocumento               : CI
+AdicionalSegip              : 
+VencimientoDocumento        : 2031-05-13
+FechaNacimiento             : 1993-12-11
+NombrePadre                 : 
+NombreMadre                 : 
+PaisNacionalidad            : BOLIVIA
+NacionalidadBoliviana       : S
+LugarNacimiento             : 
+Sexo                        : F
+EstadoCivil                 : 1
+LicenciaConducir            : 
+VencimientoLicencia         : 
+TelefonoFijoPersonal        : 
+TelefonoMovilPersonal       : 76051243
+ContactoEmergencia          : 
+TelefonoContactoEmergencia  : 
+RelacionContactoEmergencia  : 
+DireccionContactoEmergencia : 
+Ciudad                      : Santa Cruz de la Sierra
+DireccionPersonal           : VILLA 1RO DE MAYO B/PORVENIR C/2
+ZonaDireccionPersonal       : 
+ProfesionOficio             : 
+MatriculaProfesional        : 
+CorreoPersonal              : 
+TipoSangre                  : 
+FactorSangre                : 
+NombreConyuge               : 
+TelefonoConyuge             : 
+DocumentoIdentidadConyuge   : 
+LugarTrabajoConyuge         : 
+FechaNacimientoConyuge      : 
+CodigoColaborador           : 5402945
+FechaIngreso                : 2024-01-23
+NumeroContrato              : 
+UnidadOrganizativa          : Gerencia general
+Oficina                     : 01
+IdCargo                     : 1200
+Cargo                       : TÉCNICO DE LABORATORIO
+CargoPlanillas              : TÉCNICO DE LABORATORIO
+ColaboradorSuperior         : 
+UnidadesNegocio             : {@{Codigo=003; Porcentaje=1}}
+Divisiones                  : {@{Codigo=DIRECCIÓN MÉDICA EJECUTIVA; Porcentaje=1}}
+CentrosCosto                : {@{Codigo=Laboratorio Clinico; Porcentaje=1}}
+TelefonoFijoLaboral         : 
+TelefonoMovilLaboral        : 
+CorreoLaboral               : 
+DireccionLaboral            : 
+ModalidadContrato           : Tiempo indefinido
+TipoContrato                : Escrito
+MotivoContratoPlazoFijo     : 
+FechaFinContratoPlazoFijo   : 
+FechaRatificacion           : 
+CodigoDependienteRCIVA      : 5402945015
+FormaPago                   : Banco
+CuentaBancaria              : 1311348455
+Banco                       : Ganadero
+AdministradoraPensiones     : Gestora pública
+NumeroUnicoAsignado         : 600694461
+NumeroAseguradoCaja         : 
+DatosPersonalizados         : {@{NombreDato=Área; Valor=LABORATORIO}, @{NombreDato=Riesgo Ergonómico; Valor=Ergonómico}, @{NombreDato=Tipo de Cargo; Valor=ASISTENCIAL}, @{NombreDato=GASTO/COSTO; Valor=COSTO}…}
+HaberBasico                 : 
+FechaCambioHaberBasico      : 
+Estado                      : Activo
+FechaRetiro                 : 
+CodigoAsistencia            : 5402945
+Superior                    : {@{Codigo=3274590; Nombre=NUÑEZ VACA SILVIA PATRICIA; Cargo=SUBGERENTE DE LABORATORIO; Cuenta=3274590}}
+Superior2                   : {@{Codigo=11605546; Nombre=DE ALMEIDA MOREIRA TELES FELIPE; Cargo=RESPONSABLE MÉDICO; Cuenta=11605546}}
+
+PrimerNombre                : MERY
+SegundoNombre               : LAURA
+TercerNombre                : 
+ApellidoPaterno             : CAMPOS
+ApellidoMaterno             : CABEZAS
+ApellidoCasada              : 
+NumeroDocumento             : 6221072
+ExtensionDocumento          : SC
+TipoDocumento               : CI
+AdicionalSegip              : 
+VencimientoDocumento        : 2028-05-29
+FechaNacimiento             : 1982-01-13
+NombrePadre                 : 
+NombreMadre                 : 
+PaisNacionalidad            : BOLIVIA
+NacionalidadBoliviana       : S
+LugarNacimiento             : 
+Sexo                        : F
+EstadoCivil                 : 1
+LicenciaConducir            : 
+VencimientoLicencia         : 
+TelefonoFijoPersonal        : 
+TelefonoMovilPersonal       : 70090020
+ContactoEmergencia          : 
+TelefonoContactoEmergencia  : 
+RelacionContactoEmergencia  : 
+DireccionContactoEmergencia : 
+Ciudad                      : Santa Cruz de la Sierra
+DireccionPersonal           : B/SAN JORGE Z. REFINERIA
+ZonaDireccionPersonal       : 
+ProfesionOficio             : 
+MatriculaProfesional        : 
+CorreoPersonal              : 
+TipoSangre                  : 
+FactorSangre                : 
+NombreConyuge               : 
+TelefonoConyuge             : 
+DocumentoIdentidadConyuge   : 
+LugarTrabajoConyuge         : 
+FechaNacimientoConyuge      : 
+CodigoColaborador           : 6221072
+FechaIngreso                : 2024-01-23
+NumeroContrato              : 
+UnidadOrganizativa          : Gerencia general
+Oficina                     : 01
+IdCargo                     : 1256
+Cargo                       : AUXILIAR DE ENFERMERÍA - CENTRO QUIRÚRGICO Y CME (
+CargoPlanillas              : AUXILIAR DE ENFERMERÍA
+ColaboradorSuperior         : 
+UnidadesNegocio             : {@{Codigo=003; Porcentaje=1}}
+Divisiones                  : {@{Codigo=GERENCIA MÉDICA; Porcentaje=1}}
+CentrosCosto                : {@{Codigo=Centro Quirúrigico; Porcentaje=1}}
+TelefonoFijoLaboral         : 
+TelefonoMovilLaboral        : 
+CorreoLaboral               : 
+DireccionLaboral            : 
+ModalidadContrato           : Tiempo indefinido
+TipoContrato                : Escrito
+MotivoContratoPlazoFijo     : 
+FechaFinContratoPlazoFijo   : 
+FechaRatificacion           : 
+CodigoDependienteRCIVA      : 6221072013
+FormaPago                   : Banco
+CuentaBancaria              : 1310754873
+Banco                       : Ganadero
+AdministradoraPensiones     : Gestora pública
+NumeroUnicoAsignado         : 000000000
+NumeroAseguradoCaja         : 82-5113-CCM
+DatosPersonalizados         : {@{NombreDato=Área; Valor=CENTRO QUIRÚRGICO Y CME}, @{NombreDato=Riesgo Ergonómico; Valor=Ergonómico}, @{NombreDato=Tipo de Cargo; Valor=ASISTENCIAL}, @{NombreDato=GASTO/COSTO; Valor=COSTO}…}
+HaberBasico                 : 
+FechaCambioHaberBasico      : 
+Estado                      : Activo
+FechaRetiro                 : 
+CodigoAsistencia            : 6221072
+Superior                    : {@{Codigo=6344399; Nombre=ROCHA PARRAGA SUSANA ESTHER; Cargo=COORDINADOR ASISTENCIAL DE CENTRO QUIRÚRGICO A.I.; Cuenta=6344399}}
+Superior2                   : {@{Codigo=9020204; Nombre=RODRIGUEZ CHOQUE MARIBEL; Cargo=SUBGERENTE DE ENFERMERÍA; Cuenta=9020204}}
+
+PrimerNombre                : ZULMA
+SegundoNombre               : 
+TercerNombre                : 
+ApellidoPaterno             : ALMENDRAS
+ApellidoMaterno             : VARGAS
+ApellidoCasada              : 
+NumeroDocumento             : 6245587
+ExtensionDocumento          : SC
+TipoDocumento               : CI
+AdicionalSegip              : 
+VencimientoDocumento        : 2032-09-22
+FechaNacimiento             : 1980-11-30
+NombrePadre                 : 
+NombreMadre                 : 
+PaisNacionalidad            : BOLIVIA
+NacionalidadBoliviana       : S
+LugarNacimiento             : 
+Sexo                        : F
+EstadoCivil                 : 1
+LicenciaConducir            : 
+VencimientoLicencia         : 
+TelefonoFijoPersonal        : 
+TelefonoMovilPersonal       : 77603496
+ContactoEmergencia          : 
+TelefonoContactoEmergencia  : 
+RelacionContactoEmergencia  : 
+DireccionContactoEmergencia : 
+Ciudad                      : Santa Cruz de la Sierra
+DireccionPersonal           : 9NO ANILLO AV. LOS LOTES C/LOS ANGELES
+ZonaDireccionPersonal       : 
+ProfesionOficio             : 
+MatriculaProfesional        : 
+CorreoPersonal              : 
+TipoSangre                  : 
+FactorSangre                : 
+NombreConyuge               : 
+TelefonoConyuge             : 
+DocumentoIdentidadConyuge   : 
+LugarTrabajoConyuge         : 
+FechaNacimientoConyuge      : 
+CodigoColaborador           : 6245587
+FechaIngreso                : 2024-01-23
+NumeroContrato              : 
+UnidadOrganizativa          : Gerencia general
+Oficina                     : 01
+IdCargo                     : 1256
+Cargo                       : AUXILIAR DE ENFERMERÍA - CENTRO QUIRÚRGICO Y CME (
+CargoPlanillas              : AUXILIAR DE ENFERMERÍA
+ColaboradorSuperior         : 
+UnidadesNegocio             : {@{Codigo=003; Porcentaje=1}}
+Divisiones                  : {@{Codigo=GERENCIA MÉDICA; Porcentaje=1}}
+CentrosCosto                : {@{Codigo=Centro Quirúrigico; Porcentaje=1}}
+TelefonoFijoLaboral         : 
+TelefonoMovilLaboral        : 
+CorreoLaboral               : 
+DireccionLaboral            : 
+ModalidadContrato           : Tiempo indefinido
+TipoContrato                : Escrito
+MotivoContratoPlazoFijo     : 
+FechaFinContratoPlazoFijo   : 
+FechaRatificacion           : 
+CodigoDependienteRCIVA      : 6245587014
+FormaPago                   : Banco
+CuentaBancaria              : 1310754854
+Banco                       : Ganadero
+AdministradoraPensiones     : Gestora pública
+NumeroUnicoAsignado         : 34839185
+NumeroAseguradoCaja         : 
+DatosPersonalizados         : {@{NombreDato=Área; Valor=CENTRO QUIRÚRGICO Y CME}, @{NombreDato=Riesgo Ergonómico; Valor=Ergonómico}, @{NombreDato=Tipo de Cargo; Valor=ASISTENCIAL}, @{NombreDato=GASTO/COSTO; Valor=COSTO}…}
+HaberBasico                 : 
+FechaCambioHaberBasico      : 
+Estado                      : Activo
+FechaRetiro                 : 
+CodigoAsistencia            : 6245587
+Superior                    : {@{Codigo=6344399; Nombre=ROCHA PARRAGA SUSANA ESTHER; Cargo=COORDINADOR ASISTENCIAL DE CENTRO QUIRÚRGICO A.I.; Cuenta=6344399}}
+Superior2                   : {@{Codigo=9020204; Nombre=RODRIGUEZ CHOQUE MARIBEL; Cargo=SUBGERENTE DE ENFERMERÍA; Cuenta=9020204}}
+
+PrimerNombre                : JUAN
+SegundoNombre               : MANUEL
+TercerNombre                : 
+ApellidoPaterno             : HURTADO
+ApellidoMaterno             : GALVEZ
+ApellidoCasada              : 
+NumeroDocumento             : 7737471
+ExtensionDocumento          : SC
+TipoDocumento               : CI
+AdicionalSegip              : 
+VencimientoDocumento        : 2032-05-03
+FechaNacimiento             : 1995-07-06
+NombrePadre                 : 
+NombreMadre                 : 
+PaisNacionalidad            : BOLIVIA
+NacionalidadBoliviana       : S
+LugarNacimiento             : 
+Sexo                        : M
+EstadoCivil                 : 1
+LicenciaConducir            : 
+VencimientoLicencia         : 
+TelefonoFijoPersonal        : 
+TelefonoMovilPersonal       : 69101240
+ContactoEmergencia          : 
+TelefonoContactoEmergencia  : 
+RelacionContactoEmergencia  : 
+DireccionContactoEmergencia : 
+Ciudad                      : Santa Cruz de la Sierra
+DireccionPersonal           : VILLA 1RO DE MAYO C/12 LADO ESTE
+ZonaDireccionPersonal       : 
+ProfesionOficio             : 
+MatriculaProfesional        : 
+CorreoPersonal              : 
+TipoSangre                  : 
+FactorSangre                : 
+NombreConyuge               : 
+TelefonoConyuge             : 
+DocumentoIdentidadConyuge   : 
+LugarTrabajoConyuge         : 
+FechaNacimientoConyuge      : 
+CodigoColaborador           : 7737471
+FechaIngreso                : 2024-01-23
+NumeroContrato              : 
+UnidadOrganizativa          : Gerencia general
+Oficina                     : 01
+IdCargo                     : 1256
+Cargo                       : AUXILIAR DE ENFERMERÍA - CENTRO QUIRÚRGICO Y CME (
+CargoPlanillas              : AUXILIAR DE ENFERMERÍA
+ColaboradorSuperior         : 
+UnidadesNegocio             : {@{Codigo=003; Porcentaje=1}}
+Divisiones                  : {@{Codigo=GERENCIA MÉDICA; Porcentaje=1}}
+CentrosCosto                : {@{Codigo=Centro Quirúrigico; Porcentaje=1}}
+TelefonoFijoLaboral         : 
+TelefonoMovilLaboral        : 
+CorreoLaboral               : 
+DireccionLaboral            : 
+ModalidadContrato           : Tiempo indefinido
+TipoContrato                : Escrito
+MotivoContratoPlazoFijo     : 
+FechaFinContratoPlazoFijo   : 
+FechaRatificacion           : 
+CodigoDependienteRCIVA      : 7737471018
+FormaPago                   : Banco
+CuentaBancaria              : 1310410194
+Banco                       : Ganadero
+AdministradoraPensiones     : Gestora pública
+NumeroUnicoAsignado         : 46211238
+NumeroAseguradoCaja         : 
+DatosPersonalizados         : {@{NombreDato=Área; Valor=CENTRO QUIRÚRGICO Y CME}, @{NombreDato=Riesgo Ergonómico; Valor=Ergonómico}, @{NombreDato=Tipo de Cargo; Valor=ASISTENCIAL}, @{NombreDato=GASTO/COSTO; Valor=COSTO}…}
+HaberBasico                 : 
+FechaCambioHaberBasico      : 
+Estado                      : Activo
+FechaRetiro                 : 
+CodigoAsistencia            : 7737471
+Superior                    : {@{Codigo=6344399; Nombre=ROCHA PARRAGA SUSANA ESTHER; Cargo=COORDINADOR ASISTENCIAL DE CENTRO QUIRÚRGICO A.I.; Cuenta=6344399}}
+Superior2                   : {@{Codigo=9020204; Nombre=RODRIGUEZ CHOQUE MARIBEL; Cargo=SUBGERENTE DE ENFERMERÍA; Cuenta=9020204}}
+
