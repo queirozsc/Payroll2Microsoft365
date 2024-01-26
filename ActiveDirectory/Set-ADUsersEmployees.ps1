@@ -6,43 +6,70 @@
         [array] $Employees
     )    
     begin {
-        $MappingProperties = @{
-            "PaisNacionalidad" = "Country"
-            "Divisiones" = "Department"
-            "NombreCompleto" = "DisplayName"
-            "CentrosCosto" = "Division"
-            "Nombres" = "GivenName"
-            "CodigoColaborador" = "PostalCode"
-            "CodigoUsuario" = "SamAccountName"
-            "Apellidos" = "Surname"
-            "CargoPlanillas" = "Title"
-        }
+
     }
     
     process {
         foreach ($Employee in $Employees) {
             # Join names in a full name and convert to title case
-            $NombreCompleto = Join-Fullname -FirstName $Employee.PrimerNombre `
-                            -SecondName $Employee.SegundoNombre `
-                            -ThirdName $Employee.TercerNombre `
-                            -FatherSurname $Employee.ApellidoPaterno `
+            $Fullname = Join-Fullname -FirstName $Employee.PrimerNombre `
+                                -SecondName $Employee.SegundoNombre `
+                                -ThirdName $Employee.TercerNombre `
+                                -FatherSurname $Employee.ApellidoPaterno `
+                                -MotherSurname $Employee.ApellidoMaterno `
+                                -MarriedSurname $Employee.ApellidoCasada `
+                                | Format-TitleCase
+            
+            # Join only names
+            $GivenName = Join-Fullname -FirstName $Employee.PrimerNombre `
+                                -SecondName $Employee.SegundoNombre `
+                                -ThirdName $Employee.TercerNombre `
+                                | Format-TitleCase
+
+            # Join only surnames
+            $Surname = Join-Fullname -FatherSurname $Employee.ApellidoPaterno `
                             -MotherSurname $Employee.ApellidoMaterno `
                             -MarriedSurname $Employee.ApellidoCasada `
-                        | Format-TitleCase
-            
+                            | Format-TitleCase
+
             # Generate usernames from full names
-            $Usernames = Convert-Usernames -Fullname $NombreCompleto -Country $Employee.PaisNacionalidad
+            $Usernames = Convert-Usernames -Fullname $Fullname -Country $Employee.PaisNacionalidad
 
-            # Convert job title to title case
-            $JobTitle = Format-TitleCase $Employee.CargoPlanillas
+            # Search a user in AD by identification number
+            Write-Verbose "Searching $Fullname by ID ..."
+            $UserToUpdate = Get-ADUserByID $Employee.NumeroDocumento
 
-            # Get the department from employee
-            $Department = $Employee.Divisiones[0].Codigo | Format-TitleCase
+            # Check if the user is found
+            if ($UserToUpdate) {
+                $UserToUpdate | Format-List
+                $Employee | Format-List
 
-            # Get the division from employee
-            $Division = $Employee.CentrosCosto[0].Codigo | Format-TitleCase
+                # Verify if there are a manager of employee
+                if ($Employee.Superior.Count) {
+                    # Search the manager by ID
+                    $Manager = Get-ADUserByID $Employee.Superior[0].Codigo
+                }
 
-            Write-Verbose "Searching $Fullname ($JobTitle, $Department, $Division) by usernames [$usernames] ..."
+                if ($PSCmdlet.ShouldProcess("$Fullname", "Set-ADUser")) {
+                    # Update the user
+                    Set-ADUser -Identity $UserToUpdate `
+                    -City ($Employee.Ciudad | Format-TitleCase) `
+                    -Company ($env:EMPRESA | Format-TitleCase) `
+                    -Description ($Employee.ProfesionOficio | Format-TitleCase) `
+                    -Department ($Employee.Divisiones[0].Codigo | Format-TitleCase) `
+                    -Division ($Employee.CentrosCosto[0].Codigo | Format-TitleCase) `
+                    -DisplayName $Fullname `
+                    -EmployeeID $Employee.CodigoColaborador `
+                    -EmployeeNumber $Employee.CodigoAsistencia `
+                    -GivenName $GivenName `
+                    -Manager $Manager `
+                    -Surname $GivenName `
+                    -PostalCode $Employee.NumeroDocumento `
+                    -Title ($Employee.CargoPlanillas | Format-TitleCase) `
+                    -StreetAddress ($Employee.DireccionPersonal | Format-TitleCase)                     
+                }
+
+            }
 
         }
     }
@@ -51,3 +78,9 @@
         
     }
 }
+
+$employee = Filter-CustomObject $employees -Property CodigoColaborador -Value 11604867
+Set-ADUsersEmployees $employee -Verbose
+
+$employee = Filter-CustomObject $employees -Property CodigoColaborador -Value 9661676
+Set-ADUsersEmployees $employee -Verbose

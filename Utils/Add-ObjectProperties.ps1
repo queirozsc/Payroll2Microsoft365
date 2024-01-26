@@ -40,15 +40,3 @@ function Add-ObjectProperties {
         return $ExistingObject
     }
 }
-
-$employee = [PSCustomObject]@{
-    "CodigoColaborador" = 5402945
-    "CargoPlanillas" = "TÉCNICO DE LABORATORIO"
-}
-
-$properties = @{
-    "PaisNacionalidad" = "BRASIL"
-    "LugarNacimiento" = "SAO LUIS"
-}
-
-Add-ObjectProperties -ExistingObject $employee -NewProperties $properties
