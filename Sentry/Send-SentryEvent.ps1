@@ -10,7 +10,6 @@
 .EXAMPLE
     Send-SentryEvent "Error message"
 #>
-Import-Module SentryPowershell
 function Send-SentryEvent {
     [CmdletBinding()]
     param (
