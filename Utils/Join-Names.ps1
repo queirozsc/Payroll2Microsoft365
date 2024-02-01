@@ -9,7 +9,7 @@
     Join-Names -FirstName SERGIO -FatherSurname CARVALHO -MotherSurname QUEIROZ
     #Returns "SERGIO CARVALHO QUEIROZ"
 #>
-function Join-Fullname {
+function Join-Names {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory=$False)]

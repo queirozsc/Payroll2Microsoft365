@@ -15,7 +15,7 @@ function Filter-CustomObject {
         [PSCustomObject] $OriginalObject,
         [Parameter(Mandatory=$True)]
         [string] $Property,  
-        [Parameter(Mandatory=$True)]
+        [Parameter(Mandatory=$False)]
         [string] $Value  
     )
     
