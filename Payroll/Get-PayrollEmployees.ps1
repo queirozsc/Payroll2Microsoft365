@@ -14,9 +14,6 @@
     # Returns all employees from 01/01/2024 to now
 #>
 
-
-. $PSScriptRoot\..\Set-Variables.ps1
-. $PSScriptRoot\..\Sentry\Send-SentryEvent.ps1
 function Get-PayrollEmployees {
     [CmdletBinding()]
     param (

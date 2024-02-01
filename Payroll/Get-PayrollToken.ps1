@@ -6,8 +6,6 @@
 .EXAMPLE
     Get-PayrollToken
 #>
-. $PSScriptRoot\..\Set-Variables.ps1
-. $PSScriptRoot\..\Sentry\Send-SentryEvent.ps1
 function Get-PayrollToken {
     [CmdletBinding()]
     param (
