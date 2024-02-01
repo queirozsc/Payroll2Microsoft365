@@ -12,6 +12,7 @@ if (Get-InstalledModule SentryPowershell) {
         exit
     }
 }
+Import-Module SentryPowershell
 
 #Install the NuGet provider
 Write-Host -ForegroundColor Gray "Installing NuGet..."
@@ -51,8 +52,25 @@ if (Get-InstalledModule Microsoft.Graph) {
         exit
     }
 }
+Import-Module Microsoft.Graph
 
-#Install Remote Server Administration Tools (RSAT)
+#Install Microsoft Graph Beta Powershell SDK into the all users scope
+Write-Host -ForegroundColor Gray "Installing Microsoft Graph Beta Powershell SDK..."
+if (Get-InstalledModule Microsoft.Graph.Beta) {
+    Update-Module Microsoft.Graph.Beta
+    Write-Host -ForegroundColor Green "Microsoft Graph version $((Get-InstalledModule Microsoft.Graph).Version.ToString()) installed"
+} else {
+    try {
+        Install-Module Microsoft.Graph.Beta -Scope AllUsers -Force
+    }
+    catch {
+        Write-Host -ForegroundColor Red $_.message
+        exit
+    }
+}
+Import-Module Microsoft.Graph.Beta
+
+# Install Remote Server Administration Tools (RSAT)
 Write-Host -ForegroundColor Gray "Installing Remote Server Admistration Tools (RSAT)..."
 Add-WindowsCapability -Online -Name 'Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0'
 Get-WindowsCapability -Name RSAT* -Online | Select-Object -Property DisplayName, State
