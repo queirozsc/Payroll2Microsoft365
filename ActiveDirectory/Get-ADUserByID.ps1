@@ -9,8 +9,6 @@
     Get-ADUserByID 7737471
     # Returns Active Directory user who has payroll code equals 7737471
 #>
-
-
 function Get-ADUserByID {
     [CmdletBinding()]
     param (
@@ -31,7 +29,7 @@ function Get-ADUserByID {
             Send-SentryEvent $_.Exception.Message
         }
         if ($ADUser) {
-            Write-Verbose "User $($ADUser.Name) has been found!"
+            Write-Verbose "User $($ADUser.SamAccountName) has been found!"
         } else {
             Write-Verbose "User not found!"
         }

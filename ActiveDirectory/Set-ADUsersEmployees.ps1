@@ -12,7 +12,7 @@
     process {
         foreach ($Employee in $Employees) {
             # Join names in a full name and convert to title case
-            $Fullname = Join-Fullname -FirstName $Employee.PrimerNombre `
+            $Fullname = Join-Names -FirstName $Employee.PrimerNombre `
                                 -SecondName $Employee.SegundoNombre `
                                 -ThirdName $Employee.TercerNombre `
                                 -FatherSurname $Employee.ApellidoPaterno `
@@ -21,28 +21,30 @@
                                 | Format-TitleCase
             
             # Join only names
-            $GivenName = Join-Fullname -FirstName $Employee.PrimerNombre `
+            $GivenName = Join-Names -FirstName $Employee.PrimerNombre `
                                 -SecondName $Employee.SegundoNombre `
                                 -ThirdName $Employee.TercerNombre `
                                 | Format-TitleCase
 
             # Join only surnames
-            $Surname = Join-Fullname -FatherSurname $Employee.ApellidoPaterno `
+            $Surname = Join-Names -FatherSurname $Employee.ApellidoPaterno `
                             -MotherSurname $Employee.ApellidoMaterno `
                             -MarriedSurname $Employee.ApellidoCasada `
                             | Format-TitleCase
 
             # Generate usernames from full names
-            $Usernames = Convert-Usernames -Fullname $Fullname -Country $Employee.PaisNacionalidad
+            $Usernames = Convert-Usernames -Fullname $Fullname -Country $Employee.PaisNacionalidad -Verbose
 
             # Search a user in AD by identification number
             Write-Verbose "Searching $Fullname by ID ..."
-            $UserToUpdate = Get-ADUserByID $Employee.NumeroDocumento
+            $UserToUpdate = Get-ADUserByID $Employee.NumeroDocumento -Verbose
 
             # Check if the user is found
             if ($UserToUpdate) {
-                $UserToUpdate | Format-List
-                $Employee | Format-List
+                $ADProperties[SamAccountName] = $UserToUpdate.SamAccountName
+                Add-ObjectProperties -ExistingObject $Employee -NewProperties $ADProperties
+                #$UserToUpdate | Format-List
+                #$Employee | Format-List
 
                 # Verify if there are a manager of employee
                 if ($Employee.Superior.Count) {
@@ -50,7 +52,7 @@
                     $Manager = Get-ADUserByID $Employee.Superior[0].Codigo
                 }
 
-                if ($PSCmdlet.ShouldProcess("$Fullname", "Set-ADUser")) {
+                if ($PSCmdlet.ShouldProcess("$($UserToUpdate.SamAccountName)", "Set-ADUser")) {
                     # Update the user
                     Set-ADUser -Identity $UserToUpdate `
                     -City ($Employee.Ciudad | Format-TitleCase) `
@@ -63,7 +65,7 @@
                     -EmployeeNumber $Employee.CodigoAsistencia `
                     -GivenName $GivenName `
                     -Manager $Manager `
-                    -Surname $GivenName `
+                    -Surname $Surname `
                     -PostalCode $Employee.NumeroDocumento `
                     -Title ($Employee.CargoPlanillas | Format-TitleCase) `
                     -StreetAddress ($Employee.DireccionPersonal | Format-TitleCase)                     
@@ -78,9 +80,3 @@
         
     }
 }
-
-$employee = Filter-CustomObject $employees -Property CodigoColaborador -Value 11604867
-Set-ADUsersEmployees $employee -Verbose
-
-$employee = Filter-CustomObject $employees -Property CodigoColaborador -Value 9661676
-Set-ADUsersEmployees $employee -Verbose

@@ -12,7 +12,6 @@
     $VerifiedUser = Get-ADUserByUsernames $usernames -VerificationName "SERGIO CARVALHO QUEIROZ"
     # Search AD, verifying if the full name is the same of AD User
 #>
-
 function Get-ADUserByUsernames {
     [CmdletBinding()]
     param (
