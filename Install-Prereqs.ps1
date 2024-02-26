@@ -75,3 +75,20 @@ Write-Host -ForegroundColor Gray "Installing Remote Server Admistration Tools (R
 Add-WindowsCapability -Online -Name 'Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0'
 Get-WindowsCapability -Name RSAT* -Online | Select-Object -Property DisplayName, State
 Import-Module ActiveDirectory
+
+
+#Install PoshLog
+Write-Host -ForegroundColor Gray "Installing PoSHLog..."
+if (Get-InstalledModule PoshLog) {
+    Update-Module PoshLog
+    Write-Host -ForegroundColor Green "PoSHLog version $((Get-InstalledModule PoSHLog).Version.ToString()) installed"
+} else {
+    try {
+        Install-Module PoSHLog -Scope AllUsers -Force
+    }
+    catch {
+        Write-Host -ForegroundColor Red $_.message
+        exit
+    }
+}
+Import-Module PoSHLog

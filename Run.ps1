@@ -2,9 +2,14 @@
 . .\Import-AllModules.ps1
 
 # Connect to Payroll
-#Get-PayrollToken
+Get-PayrollToken -Verbose
 
-# Retrieve all employees
+# Inactive employees
+Disable-InactiveEmployees -Verbose
+
+# Active employees
+#$Employees = Get-PayrollEmployees -ActivesOnly
+
 
 
     <# if ($env:DEBUG_MODE) {

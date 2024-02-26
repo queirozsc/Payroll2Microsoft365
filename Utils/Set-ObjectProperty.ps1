@@ -26,7 +26,7 @@ function Set-ObjectProperty {
         [PSCustomObject] $ExistingObject,
         [Parameter(Mandatory=$True)]
         [string] $Name,
-        [Parameter(Mandatory=$True)]
+        [Parameter(Mandatory=$False)]
         [string] $Value
     )
     

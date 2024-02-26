@@ -18,6 +18,8 @@ function Get-PayrollEmployees {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory=$False)]
+        [switch] $ActivesOnly,
+        [Parameter(Mandatory=$False)]
         [switch] $InactivesOnly,
         [Parameter(Mandatory=$False)]
         [datetime] $StartDate,
@@ -47,7 +49,9 @@ function Get-PayrollEmployees {
     process {
         # Adjust POST message to filter by status of employee
         # 1 = Active / 2 = Inactive
-        if ($InactivesOnly) {
+        if ($ActivesOnly) {
+            $postParam["Estado"] = "1"
+        } elseif ($InactivesOnly) {
             $postParam["Estado"] = "2"
         }
 
@@ -69,6 +73,32 @@ function Get-PayrollEmployees {
         }
         catch {
             Send-SentryEvent $_.Exception.Message
+        }
+
+        foreach ($Employee in $Employees) {
+            # Join names in a full name and convert to title case
+            $NombreCompleto = Join-Names -FirstName $Employee.PrimerNombre `
+                                -SecondName $Employee.SegundoNombre `
+                                -ThirdName $Employee.TercerNombre `
+                                -FatherSurname $Employee.ApellidoPaterno `
+                                -MotherSurname $Employee.ApellidoMaterno `
+                                -MarriedSurname $Employee.ApellidoCasada `
+                                | Format-TitleCase
+            Set-ObjectProperty -ExistingObject $Employee -Name NombreCompleto -Value $NombreCompleto
+            
+            # Department
+            $Division = $Employee.Divisiones[0].Codigo | Format-TitleCase
+            Set-ObjectProperty -ExistingObject $Employee -Name Division -Value $Division
+
+            # -Division
+            $CentroCosto = $Employee.CentrosCosto[0].Codigo | Format-TitleCase
+            Set-ObjectProperty -ExistingObject $Employee -Name CentroCosto -Value $CentroCosto
+
+            # Superior
+            $NombreSuperior = $Employee.Superior[0].Nombre | Format-TitleCase
+            Set-ObjectProperty -ExistingObject $Employee -Name NombreSuperior -Value $NombreSuperior
+            
+
         }
     }
     

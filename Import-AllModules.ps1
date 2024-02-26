@@ -21,13 +21,20 @@
 . .\ActiveDirectory\Get-ADUsers.ps1
 . .\ActiveDirectory\Get-ADUserByID.ps1
 . .\ActiveDirectory\Get-ADUserByUsernames.ps1
-. .\ActiveDirectory\Set-ADUsersEmployees.ps1
 
 # Includes all Microsoft Graph functions
 #Import-PSFiles -Path ".\MicrosoftGraph" -Verbose
 . .\MicrosoftGraph\Connect-Microsoft365.ps1
+. .\MicrosoftGraph\Get-Microsoft365ADUser.ps1
 
 # Includes all Payroll functions
 #Import-PSFiles -Path ".\Payroll" -Verbose -WhatIf:$false
 . .\Payroll\Get-PayrollToken.ps1
 . .\Payroll\Get-PayrollEmployees.ps1
+
+# Main functions
+. .\Disable-InactiveEmployees.ps1
+. .\Search-EmployeeADUser.ps1
+
+# Windows Event Log
+New-EventLog -ComputerName $env:COMPUTERNAME -Source Payroll-Microsoft365 -LogName Application

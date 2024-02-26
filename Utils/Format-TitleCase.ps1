@@ -11,7 +11,7 @@ function Format-TitleCase {
     [CmdletBinding()]
     param (
         [CmdletBinding()]
-        [Parameter(Mandatory=$True, ValueFromPipeline=$True)]
+        [Parameter(Mandatory=$False, ValueFromPipeline=$True)]
         [string]$inputString
     )
     
