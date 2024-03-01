@@ -30,20 +30,20 @@ function Get-PayrollToken {
     process {
         try {
             # Invoke API for authentication
-            Write-Verbose "Connecting to $SALAR_URI ..."
+            Write-Verbose "$($MyInvocation.MyCommand.Name): Connecting to $SALAR_URI ..."
             $response = Invoke-RestMethod $SALAR_URI -Method 'POST' -Headers $headers -Body $body
         }
         catch {
             # Send error to Sentry.io
-            Send-SentryEvent $response.Mensajes[0]
+            Send-SentryEvent -Message $response.Mensajes[0] -FunctionName $MyInvocation.MyCommand.Name
         }
         # If successfull, store token for further use
         if ($response.Exito) {
             $env:SALAR_TOKEN = $response.Token
-            Write-Verbose "Token: $env:SALAR_TOKEN"
+            Write-Verbose "$($MyInvocation.MyCommand.Name): Token $env:SALAR_TOKEN"
         } else {
             # Send error to Sentry.io
-            Send-SentryEvent $response.Mensajes[0]
+            Send-SentryEvent -Message $response.Mensajes[0] -FunctionName $MyInvocation.MyCommand.Name
         }        
     }
     

@@ -42,7 +42,12 @@ function Set-ObjectProperty {
         }
         else {
             # Property doesn't exist, add the property
-            $ExistingObject | Add-Member -MemberType NoteProperty -Name $Name -Value $Value
+            try {
+                $ExistingObject | Add-Member -MemberType NoteProperty -Name $Name -Value $Value
+            }
+            catch {
+                Send-SentryEvent -Message $_.Exception.Message -FunctionName $MyInvocation.MyCommand.Name -ObjectId $ExistingObject.$Name
+            }
         }
     }
     

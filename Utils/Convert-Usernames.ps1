@@ -38,13 +38,19 @@ Function Convert-Usernames {
         }
 
         # Apply the username standard: first letter + father surname
-        $Usernames += $Names[0][0] + $FatherSurname
+        $Username = Clean-SpecialChars ($Names[0][0] + $FatherSurname)
+        $Usernames += $Username
 
-        # Generate username alternative with the others surnames
-        While ($i -gt 1) {
-            $Usernames += $Names[0][0] + $Names[$i - 1][0] + $FatherSurname
-            $i--
-        }
+        # Generate username alternative with first letters from others surnames
+        $Username = ( $Names | ForEach-Object { if ( $_ -ne $FatherSurname ) { $_[0] } } ) -join ''
+        $Username += $FatherSurname
+        $Username = Clean-SpecialChars $Username
+        $Usernames += $Username
+        # While ($i -gt 1) {
+        #     $Username = Clean-SpecialChars ($Names[0][0] + $Names[$i - 1][0] + $FatherSurname)
+        #     $Usernames += $Username
+        #     $i--
+        # }
     }
     
     End {

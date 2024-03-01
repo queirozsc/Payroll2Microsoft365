@@ -19,6 +19,7 @@ function Format-TitleCase {
         # Define a list of common prepositions to exclude
         $prepositions = @(
             "a", "e", "i", "o", "u", "y", 
+            "al",
             "con", 
             "en", "entre",
             "da", "de", "do", "desde", "del"

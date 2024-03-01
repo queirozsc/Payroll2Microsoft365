@@ -13,7 +13,7 @@
             $ADUsers = Get-ADUser -Filter { (!PostalCode -or (PostalCode -eq '')) }
         }
         catch {
-            Send-SentryEvent $_.Exception.Message
+            Send-SentryEvent -Message $_.Exception.Message -FunctionName $MyInvocation.MyCommand.Name
         }
     }
     

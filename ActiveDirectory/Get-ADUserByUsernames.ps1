@@ -30,12 +30,12 @@ function Get-ADUserByUsernames {
         if ($Usernames -ne $null -and $Usernames.Count -gt 0) {
             foreach ($Username in $Usernames) {
                 # Search Active Directory by account name
-                Write-Verbose "Searching on $env:AD_SERVER_NAME for Username $Username ..."
+                Write-Verbose "$($MyInvocation.MyCommand.Name): searching $Username on $env:AD_SERVER_NAME"
                 try {
                     $ADUser = Get-ADUser -Filter { SamAccountName -eq $Username}
                 }
                 catch {
-                    Send-SentryEvent $_.Exception.Message
+                    Send-SentryEvent -Message $_.Exception.Message -FunctionName $MyInvocation.MyCommand.Name -ObjectID $Username
                 }
 
                 if ($ADUser) {
@@ -51,7 +51,7 @@ function Get-ADUserByUsernames {
                 
                 # User was found! Break the loop
                 if ($UserFound) {
-                    Write-Verbose "User $($ADUser.Name) has been found!"
+                    Write-Verbose "$($MyInvocation.MyCommand.Name): returned ADUser $($ADUser.SamAccountName, $ADUser.Name)"
                     break
                 }
             }

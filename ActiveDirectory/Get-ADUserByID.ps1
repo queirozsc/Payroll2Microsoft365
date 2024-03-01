@@ -22,16 +22,17 @@ function Get-ADUserByID {
     process {
         try {
             # Get the user by identification document
-            Write-Verbose "Searching on $env:AD_SERVER_NAME for UserID $UserID ..."
+            Write-Verbose "$($MyInvocation.MyCommand.Name): searching $UserID on $env:AD_SERVER_NAME"
             $ADUser = Get-ADUser -Filter { PostalCode -eq $UserID}
         }
         catch {
-            Send-SentryEvent $_.Exception.Message
+            Write-EventLog -LogName "Application" -Source "Payroll-Microsoft365" -EventID 4001 -EntryType Error -Message "$($MyInvocation.MyCommand.Name): searching $UserID on $env:AD_SERVER_NAME"
+            Send-SentryEvent -Message $_.Exception.Message -FunctionName $MyInvocation.MyCommand.Name -ObjectId $UserID
         }
         if ($ADUser) {
-            Write-Verbose "User $($ADUser.SamAccountName) has been found!"
+            Write-Verbose "$($MyInvocation.MyCommand.Name): returned ADUser $($ADUser.SamAccountName, $ADUser.Name)"
         } else {
-            Write-Verbose "User not found!"
+            Write-Verbose "$($MyInvocation.MyCommand.Name): $UserID not found!"
         }
     }
     

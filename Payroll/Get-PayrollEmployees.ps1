@@ -68,11 +68,12 @@ function Get-PayrollEmployees {
 
         # Invoke API to get a list of employees
         try {
+            Write-Verbose "$($MyInvocation.MyCommand.Name): Connecting to $SALAR_URI ..."
             $employees = Invoke-RestMethod $SALAR_URI -Method 'POST' -Headers $headers -Body $body `
                             | Select-Object -ExpandProperty Resultado
         }
         catch {
-            Send-SentryEvent $_.Exception.Message
+            Send-SentryEvent -Message $_.Exception.Message -FunctionName $MyInvocation.MyCommand.Name
         }
 
         foreach ($Employee in $Employees) {
@@ -87,18 +88,16 @@ function Get-PayrollEmployees {
             Set-ObjectProperty -ExistingObject $Employee -Name NombreCompleto -Value $NombreCompleto
             
             # Department
-            $Division = $Employee.Divisiones[0].Codigo | Format-TitleCase
+            $Division = $Employee.Divisiones[0].Nombre | Format-TitleCase
             Set-ObjectProperty -ExistingObject $Employee -Name Division -Value $Division
 
             # -Division
-            $CentroCosto = $Employee.CentrosCosto[0].Codigo | Format-TitleCase
+            $CentroCosto = $Employee.CentrosCosto[0].Nombre | Format-TitleCase
             Set-ObjectProperty -ExistingObject $Employee -Name CentroCosto -Value $CentroCosto
 
             # Superior
             $NombreSuperior = $Employee.Superior[0].Nombre | Format-TitleCase
-            Set-ObjectProperty -ExistingObject $Employee -Name NombreSuperior -Value $NombreSuperior
-            
-
+            Set-ObjectProperty -ExistingObject $Employee -Name NombreSuperior -Value $NombreSuperior            
         }
     }
     

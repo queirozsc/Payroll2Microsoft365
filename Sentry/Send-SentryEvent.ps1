@@ -14,12 +14,18 @@ function Send-SentryEvent {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory)]
-        [string]$Message
+        [string]$Message,
+        [Parameter()]
+        [string]$FunctionName,
+        [Parameter()]
+        [string]$ObjectId
         )
     
     begin {
         $tags = @{
-            'backendType' = "Powershell " + $PSVersionTable.PSEdition + " " + $PSVersionTable.PSVersion
+            'powershell_version' = $PSVersionTable.PSEdition + " " + $PSVersionTable.PSVersion
+            'function_name' = $FunctionName
+            'object_id' = $ObjectID
         }
         $sentry = New-Sentry -SentryDsn $env:SENTRA_DSN -Tags $tags        
     }
