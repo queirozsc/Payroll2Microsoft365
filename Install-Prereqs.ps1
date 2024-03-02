@@ -78,17 +78,17 @@ Import-Module ActiveDirectory
 
 
 #Install PoshLog
-Write-Host -ForegroundColor Gray "Installing PoSHLog..."
-if (Get-InstalledModule PoshLog) {
-    Update-Module PoshLog
-    Write-Host -ForegroundColor Green "PoSHLog version $((Get-InstalledModule PoSHLog).Version.ToString()) installed"
-} else {
-    try {
-        Install-Module PoSHLog -Scope AllUsers -Force
-    }
-    catch {
-        Write-Host -ForegroundColor Red $_.message
-        exit
-    }
-}
-Import-Module PoSHLog
+# Write-Host -ForegroundColor Gray "Installing PoSHLog..."
+# if (Get-InstalledModule PoshLog) {
+#     Update-Module PoshLog
+#     Write-Host -ForegroundColor Green "PoSHLog version $((Get-InstalledModule PoSHLog).Version.ToString()) installed"
+# } else {
+#     try {
+#         Install-Module PoSHLog -Scope AllUsers -Force
+#     }
+#     catch {
+#         Write-Host -ForegroundColor Red $_.message
+#         exit
+#     }
+# }
+# Import-Module PoSHLog

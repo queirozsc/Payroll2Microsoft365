@@ -1,4 +1,4 @@
-﻿function Get-Microsoft365ADUser {
+﻿function Get-MicrosoftEntraIdUser {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory=$True, ValueFromPipeline=$True)]

@@ -29,7 +29,10 @@
 # Includes all Microsoft Graph functions
 #Import-PSFiles -Path ".\MicrosoftGraph" -Verbose
 . .\MicrosoftGraph\Connect-Microsoft365.ps1
-. .\MicrosoftGraph\Get-Microsoft365ADUser.ps1
+. .\MicrosoftGraph\Get-Microsoft365Teams.ps1
+. .\MicrosoftGraph\Get-MicrosoftEntraIdUser.ps1
+. .\MicrosoftGraph\New-Microsoft365TeamMember.ps1
+. .\MicrosoftGraph\Remove-Microsoft365TeamMember.ps1
 
 # Includes all Payroll functions
 #Import-PSFiles -Path ".\Payroll" -Verbose -WhatIf:$false

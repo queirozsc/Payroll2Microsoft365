@@ -8,6 +8,11 @@
     begin {
         # Get active employees
         $ActiveEmployees = Get-PayrollEmployees -ActivesOnly
+
+        # Enterprise team
+        if (!$EnterpriseTeams) {
+            $EnterpriseTeams = Get-Microsoft365Teams -Name "Somos CDLA" -CreateIfMissing
+        }    
     }
     
     process {
@@ -31,7 +36,24 @@
                 $ADUser = New-ADUserEmployee $Employee -Verbose
             }
 
-            # Add AD user to standard security groups
+
+            # Search user in Microsoft Entra Id
+            $EntraIdUser = Get-MicrosoftEntraIdUser -ADUser $ADUser
+            if ($EntraIdUser) {
+                # Remove user from all teams
+                Remove-Microsoft365TeamMember -Microsoft365User $EntraIdUser
+
+                # Add user to enterprise team
+                New-Microsoft365TeamMember -Microsoft365Teams $EnterpriseTeams -Microsoft365User $EntraIdUser
+
+                # Add user to Division team
+                $DivisionTeams = Get-Microsoft365Teams -Name "Somos $($Employee.Division)" -CreateIfMissing
+                New-Microsoft365TeamMember -Microsoft365Teams $DivisionTeams -Microsoft365User $EntraIdUser
+
+                # Department team
+                $DepartmentTeams = Get-Microsoft365Teams -Name "Somos $($Employee.CentroCosto)" -CreateIfMissing
+                New-Microsoft365TeamMember -Microsoft365Teams $DepartmentTeams -Microsoft365User $EntraIdUser
+            }
 
         }
     }

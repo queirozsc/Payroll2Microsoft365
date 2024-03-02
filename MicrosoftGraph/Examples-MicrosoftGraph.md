@@ -124,6 +124,7 @@ $scopes = @(
     "Group.ReadWrite.All"
     "GroupMember.ReadWrite.All"
     "Directory.ReadWrite.All"
+    "TeamSettings.ReadWrite.All"
 )
 Connect-MgGraph -Scopes $scopes
 Get-MgContext | Select -ExpandProperty Scopes
