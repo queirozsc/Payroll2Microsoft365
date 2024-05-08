@@ -1,11 +1,14 @@
 ﻿<#
 .SYNOPSIS
-    Format a string in title case, except prepositions
+    Formats a string into title case, excluding common prepositions.
 .DESCRIPTION
-    Format a string to title case, but prepositions in lower case
+    This function formats a string into title case, where the first letter of each word is capitalized, except 
+    for common prepositions which are kept in lowercase.
+.PARAMETER inputString
+    The string to format into title case.
 .EXAMPLE
     Format-TitleCase "CLINICA METROPOLITANA DE LAS AMERICAS" 
-    # Returns "Clinica Metropolitana de las Americas"
+    Returns "Clinica Metropolitana de las Americas"
 #>
 function Format-TitleCase {
     [CmdletBinding()]

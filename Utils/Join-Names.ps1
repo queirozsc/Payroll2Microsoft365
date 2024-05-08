@@ -1,13 +1,24 @@
 ﻿<#
 .SYNOPSIS
-    Generates a full name from names and surnames non empty data
+    Joins individual name components into a single string.
 .DESCRIPTION
-    Create a full name joining several names and surnames, if it's not empty
-.NOTES
-    In payroll system, the name of workes is stored in separated fields
+    This function joins individual name components, such as first name, last name, and so on, into a single string,
+    separating each component with a space. It removes any leading or trailing spaces from the resulting string.
+.PARAMETER FirstName
+    The first name component.
+.PARAMETER SecondName
+    The second name component.
+.PARAMETER ThirdName
+    The third name component.
+.PARAMETER FatherSurname
+    The father's surname component.
+.PARAMETER MotherSurname
+    The mother's surname component.
+.PARAMETER MarriedSurname
+    The married surname component.
 .EXAMPLE
     Join-Names -FirstName SERGIO -FatherSurname CARVALHO -MotherSurname QUEIROZ
-    #Returns "SERGIO CARVALHO QUEIROZ"
+    Returns "SERGIO CARVALHO QUEIROZ"
 #>
 function Join-Names {
     [CmdletBinding()]

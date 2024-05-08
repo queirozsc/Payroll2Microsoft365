@@ -1,12 +1,19 @@
 ﻿<#
 .SYNOPSIS
-    Returns a new custom object by filtering an existing object by any property
+    Filters a custom object based on a specified property and value.
 .DESCRIPTION
-    Create a new custom object by filtering an existing object. You can use any property as filter criteria
+    This function filters a custom object based on a specified property and value. It returns a new custom 
+    object containing only the elements that match the specified property-value pair.
+.PARAMETER OriginalObject
+    The original custom object to filter.
+.PARAMETER Property
+    The property name to filter on.
+.PARAMETER Value
+    The value to filter by.
 .EXAMPLE
     $employees = Get-PayrollEmployees
     $employee = Filter-CustomObject -OriginalObject $employees -Property CodigoColaborador -Value 7737471
-    # Returns a single employee with ID equals to 7737471
+    Returns a single employee with ID equals to 7737471
 #>
 function Filter-CustomObject {
     [CmdletBinding()]

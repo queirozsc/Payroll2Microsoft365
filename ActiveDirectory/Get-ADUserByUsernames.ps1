@@ -1,17 +1,23 @@
 ﻿<#
 .SYNOPSIS
-    Search for an Active Directory user by a list of usernames
+    Retrieves Active Directory user information based on the provided array of usernames.
 .DESCRIPTION
-    Recursive search in Active Directory using a list of usernames
-.NOTES
-    To get a list of usernames from a full name, use the function Util\Convert-Usernames
+    This function searches for users in Active Directory using an array of usernames.
+    It optionally verifies the user by full name if a verification name is provided.
+.PARAMETER Usernames
+    Specifies an array of usernames to search for in Active Directory.
+.PARAMETER VerificationName
+    Specifies an optional array of verification names to cross-check against the full name of the found users.
+.EXAMPLE
+    Get-ADUserByUsernames -Usernames @("user1", "user2") -VerificationName @("User1 Full Name", "User2 Full Name")
+    Retrieves the user information from Active Directory for "user1" and "user2" and verifies them against their full names.
 .EXAMPLE
     $usernames = Convert-Usernames "SERGIO CARVALHO QUEIROZ"
     $UnverifiedUser = Get-ADUserByUsernames $usernames
-    # Search AD, but not validating full name
+    Search AD, but not validating full name
+.EXAMPLE
     $VerifiedUser = Get-ADUserByUsernames $usernames -VerificationName "SERGIO CARVALHO QUEIROZ"
-    # Search AD, verifying if the full name is the same of AD User
-#>
+    Search AD, verifying if the full name is the same of AD User#>
 function Get-ADUserByUsernames {
     [CmdletBinding()]
     param (

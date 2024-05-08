@@ -1,14 +1,16 @@
 ﻿<#
 .SYNOPSIS
-    Search for an Active Directory user by identification number
+    Retrieves Active Directory user information based on the provided identification document.
 .DESCRIPTION
-    Search for an user based on your identification number
-.NOTES
-    For integration purpose, the ID of employee was stored on Postal Code field of Active Directory
+    This function searches for a user in Active Directory using a provided identification document (UserID).
+    It logs errors and sends event notifications in case of failure.
+.PARAMETER UserID
+    Specifies the identification document of the user to search for.
 .EXAMPLE
-    Get-ADUserByID 7737471
-    # Returns Active Directory user who has payroll code equals 7737471
+    Get-ADUserByID -UserID "123456789"
+    Retrieves the user information from Active Directory based on the identification document "123456789".
 #>
+
 function Get-ADUserByID {
     [CmdletBinding()]
     param (

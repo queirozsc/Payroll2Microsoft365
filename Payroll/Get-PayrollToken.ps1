@@ -1,10 +1,13 @@
 ﻿<#
 .SYNOPSIS
-    Connects to Salar API to get token
+    Retrieves an authentication token from a payroll API.
 .DESCRIPTION
-    Connects to Salar API and stores token return in env variable for further use
+    This function retrieves an authentication token from a specified payroll API using provided credentials.
+.PARAMETER None
+    This function does not accept any parameters.
 .EXAMPLE
     Get-PayrollToken
+    Retrieves an authentication token from the payroll API.
 #>
 function Get-PayrollToken {
     [CmdletBinding()]

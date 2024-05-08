@@ -1,4 +1,23 @@
-﻿function New-ADUserEmployee {
+﻿<#
+.SYNOPSIS
+    Creates a new Active Directory user for an employee using provided employee information.
+.DESCRIPTION
+    This function generates possible usernames for the employee based on their full name and country of nationality.
+    It verifies if any of the generated usernames are available in Active Directory and creates a new user if a username is available.
+    The function sets a default password for the new user and enables the account to change password at logon.
+    It logs information and errors during the user creation process.
+.PARAMETER Employee
+    Specifies a PSCustomObject containing employee information including full name, nationality, and job title.
+.EXAMPLE
+    $EmployeeData = [PSCustomObject]@{
+        NombreCompleto = "John Doe"
+        PaisNacionalidad = "USA"
+        CargoPlanillas = "HR Manager"
+    }
+    New-ADUserEmployee -Employee $EmployeeData
+    Creates a new Active Directory user for the employee "John Doe" with the job title "HR Manager".
+#>
+function New-ADUserEmployee {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory)]

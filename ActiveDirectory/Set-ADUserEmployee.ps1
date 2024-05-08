@@ -1,4 +1,20 @@
-﻿function Set-ADUserEmployee {
+﻿<#
+.SYNOPSIS
+    Sets various attributes for an Active Directory user based on employee information.
+.DESCRIPTION
+    This function sets various attributes for an Active Directory user based on the provided ADUser and Employee objects.
+    It updates attributes such as title, department, manager, display name, employee ID, and more.
+.PARAMETER ADUser
+    Specifies a PSCustomObject representing the Active Directory user whose attributes are to be set.
+.PARAMETER Employee
+    Specifies a PSCustomObject containing employee information used to update Active Directory user attributes.
+.EXAMPLE
+    $ADUserObject = Get-ADUser -Identity "username"
+    $EmployeeData = Get-EmployeeData -Identity "username"
+    Set-ADUserEmployee -ADUser $ADUserObject -Employee $EmployeeData
+    Sets various attributes for the Active Directory user "username" based on employee information.
+#>
+function Set-ADUserEmployee {
     # Set SupportsShouldProcess to True, to make -WhatIf and -Confirm accessible
     [CmdletBinding(SupportsShouldProcess=$True, ConfirmImpact="High")]
     param (

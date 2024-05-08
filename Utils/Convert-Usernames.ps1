@@ -1,16 +1,24 @@
 ﻿<#
 .SYNOPSIS
-    Convert a full name in a list of usernames
+    Generates usernames based on the provided full name and country.
 .DESCRIPTION
-    Generate username in format initial + father surname and username alternatives
+    This function generates usernames based on the provided full name. It creates two versions of usernames: 
+    one using the first letter of the first name and the father's surname, and another with the first letter 
+    of each surname (except the father's) followed by the father's surname. The function also allows for 
+    customization based on the country.
 .NOTES
     To avoid conflict with existing username, also generate alternatives usernames.
     Important: to respect Bolivian's order of surnames, it's necessary use -Country parameter
+.PARAMETER Fullname
+    The full name from which to generate usernames.
+.PARAMETER Country
+    The country used to customize the username generation process. Default is empty.
 .EXAMPLE
     Convert-Usernames "SERGIO CARVALHO QUEIROZ" 
-    # Returns [squeiroz, scqueiroz]
+    Returns [squeiroz, scqueiroz]
+.EXAMPLE
     Convert-Usernames -Fullname "Yersin Jacob Avalos Severiche" -Country "BOLIVIA" 
-    # Returns [yavalos, yjavalos, yaavalos]
+    Returns [yavalos, yjavalos, yaavalos]
 #>
 Function Convert-Usernames {
     [CmdletBinding()]

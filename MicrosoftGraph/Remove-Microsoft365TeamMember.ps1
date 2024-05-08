@@ -1,4 +1,17 @@
-﻿function Remove-Microsoft365TeamMember {
+﻿<#
+.SYNOPSIS
+    Removes a member from a Microsoft 365 team.
+.DESCRIPTION
+    This function removes a member from a Microsoft 365 team.
+.PARAMETER Microsoft365User
+    Specifies the Microsoft 365 user to be removed from the team.
+.PARAMETER Microsoft365Teams
+    Specifies the Microsoft 365 team from which the user will be removed. If not specified, the user will be removed from all standard groups.
+.EXAMPLE
+    $user | Remove-Microsoft365TeamMember -Microsoft365Teams $team
+    Removes the user represented by $user from the Microsoft 365 team represented by $team.
+#>
+function Remove-Microsoft365TeamMember {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory=$true)]

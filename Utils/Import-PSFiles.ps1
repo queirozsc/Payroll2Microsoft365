@@ -1,4 +1,17 @@
-﻿function Import-PSFiles {
+﻿<#
+.SYNOPSIS
+    Imports PowerShell files (*.ps1) from a specified folder.
+.DESCRIPTION
+    This function imports PowerShell files (*.ps1) from the specified folder path. It is useful for bulk importing
+    functions or scripts stored in separate files.
+.PARAMETER Path
+    The path to the folder containing the PowerShell files to import. This parameter is mandatory and accepts input
+    from the pipeline.
+.EXAMPLE
+    Import-PSFiles -Path "C:\Scripts"
+    This example imports all PowerShell files (*.ps1) from the "C:\Scripts" folder.
+#>
+function Import-PSFiles {
     [CmdletBinding(SupportsShouldProcess=$True)] # Allows the use of -Confirm and -Whatif
     param (
         [Parameter(Mandatory=$True, ValueFromPipeline=$True)]

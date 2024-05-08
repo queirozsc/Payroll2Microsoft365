@@ -1,4 +1,20 @@
-﻿function Get-Microsoft365Teams {
+﻿<#
+.SYNOPSIS
+    Retrieves a Microsoft 365 team by name and optionally creates it if missing.
+.DESCRIPTION
+    This function retrieves a Microsoft 365 team by name. If the team does not exist and the $CreateIfMissing switch is specified, it creates a new team with the provided settings.
+.PARAMETER Name
+    Specifies the display name of the Microsoft 365 team to retrieve or create.
+.PARAMETER CreateIfMissing
+    Specifies whether to create the team if it doesn't exist. This parameter is optional and defaults to $false.
+.EXAMPLE
+    Get-Microsoft365Teams -Name "MyTeam"
+    Retrieves the Microsoft 365 team named "MyTeam" if it exists.
+.EXAMPLE
+    Get-Microsoft365Teams -Name "NewTeam" -CreateIfMissing
+    Retrieves the Microsoft 365 team named "NewTeam" if it exists, otherwise creates a new team with default settings.
+#>
+function Get-Microsoft365Teams {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory=$True)]

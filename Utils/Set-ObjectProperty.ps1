@@ -1,10 +1,15 @@
 ﻿<#
 .SYNOPSIS
-    Safely set a property in a custom object. If does exist, create the property and set value
+    Sets or adds a property to an existing PowerShell custom object.
 .DESCRIPTION
-    Safe adds/sets a property in a custom object
-.NOTES
-    For use with cmdlets, passing an object through the pipeline
+    This function sets or adds a property to an existing PowerShell custom object. It checks if the property already exists,
+    and if so, updates its value. If the property doesn't exist, it adds the property to the object.
+.PARAMETER ExistingObject
+    The existing PowerShell custom object to which the property will be added or updated.
+.PARAMETER Name
+    The name of the property to be added or updated.
+.PARAMETER Value
+    The value to assign to the property.
 .EXAMPLE
     $employee = [PSCustomObject]@{
         "CodigoColaborador" = 5402945
@@ -17,7 +22,7 @@
     }
 
     $user = Add-ObjectProperties -ExistingObject $employee -NewProperties $properties
-    # Adds new properties to existing object
+    Adds new properties to existing object
 #>
 function Set-ObjectProperty {
     [CmdletBinding()]

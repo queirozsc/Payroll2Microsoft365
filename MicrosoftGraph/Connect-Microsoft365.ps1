@@ -1,4 +1,20 @@
-﻿function Connect-Microsoft365 {
+﻿<#
+.SYNOPSIS
+    Connects to Microsoft 365 using Microsoft Graph PowerShell module.
+.DESCRIPTION
+    This function connects to Microsoft 365 using the Microsoft Graph PowerShell module.
+    It supports connecting in both delegated mode (when running in debug mode) and with Azure App Registration.
+.PARAMETER Scopes
+    Specifies a hashtable containing the scopes for the Microsoft Graph connection.
+    This parameter is optional and only used when connecting in delegated mode.
+.EXAMPLE
+    Connect-Microsoft365
+    Connects to Microsoft 365 using Azure App Registration for authentication.
+.EXAMPLE
+    Connect-Microsoft365 -Scopes @{ 'User.Read' = $true }
+    Connects to Microsoft 365 in delegated mode with specified scopes for user read access.
+#>
+function Connect-Microsoft365 {
     [CmdletBinding(SupportsShouldProcess=$True)]
     param (
         [Parameter(Mandatory=$False)]

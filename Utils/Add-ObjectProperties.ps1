@@ -1,23 +1,22 @@
 ﻿<#
 .SYNOPSIS
-    Adds properties in a custom object
+    Adds new properties to an existing PowerShell object.
 .DESCRIPTION
-    Adds properties to a existing custom object
-.NOTES
-    For use with cmdlets, passing an object through the pipeline
+    This function adds new properties to an existing PowerShell object using the Add-Member cmdlet.
+.PARAMETER ExistingObject
+    The existing PowerShell object to which new properties will be added.
+.PARAMETER NewProperties
+    A hashtable containing the new properties to be added to the existing object.
 .EXAMPLE
-    $employee = [PSCustomObject]@{
-        "CodigoColaborador" = 5402945
-        "CargoPlanillas" = "TÉCNICO DE LABORATORIO"
+    $existingObject = [PSCustomObject]@{
+        Name = "John"
     }
-
-    $properties = @{
-        "PaisNacionalidad" = "BOLIVIA"
-        "LugarNacimiento" = "SANTA CRUZ"
+    $newProperties = @{
+        Age = 30
+        City = "New York"
     }
-
-    $user = Add-ObjectProperties -ExistingObject $employee -NewProperties $properties
-    # Adds new properties to existing object
+    Add-ObjectProperties -ExistingObject $existingObject -NewProperties $newProperties
+    Adds the Age and City properties to the existing object $existingObject.
 #>
 function Add-ObjectProperties {
     [CmdletBinding()]

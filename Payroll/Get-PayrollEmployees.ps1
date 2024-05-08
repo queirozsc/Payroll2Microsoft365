@@ -1,19 +1,28 @@
 ﻿<#
 .SYNOPSIS
-    Connects to Salar API to get a list of employees
+    Retrieves a list of employees from a payroll API.
 .DESCRIPTION
-    Connects to Salar API and returns a list of employees
+    This function retrieves a list of employees from a specified payroll API, with optional filtering based on active or inactive status and date range.
+.PARAMETER ActivesOnly
+    Specifies whether to retrieve only active employees.
+.PARAMETER InactivesOnly
+    Specifies whether to retrieve only inactive employees.
+.PARAMETER StartDate
+    Specifies the start date for filtering employees based on their employment start date.
+.PARAMETER EndDate
+    Specifies the end date for filtering employees based on their employment start date.
 .EXAMPLE
     Get-PayrollEmployees
-    # Returns all employees, actives and inactives
+    Returns all employees, actives and inactives
+.EXAMPLE
     Get-PayrollEmployees -InactivesOnly
-    # Returns all inactives employees
+    Returns all inactives employees
+.EXAMPLE
     $StartDate = Get-Date "01/01/2024"
     $EndDate = Get-Date
     Get-PayrollEmployees -StartDate $StartDate -EndDate $EndDate
-    # Returns all employees from 01/01/2024 to now
+    Returns all employees from 01/01/2024 to now
 #>
-
 function Get-PayrollEmployees {
     [CmdletBinding()]
     param (

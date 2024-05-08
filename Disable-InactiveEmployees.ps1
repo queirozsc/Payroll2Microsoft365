@@ -1,4 +1,36 @@
-﻿function Disable-InactiveEmployees {
+﻿<#
+.SYNOPSIS
+    Disable-InactiveEmployees: Disables inactive employees in Active Directory and Microsoft 365.
+.DESCRIPTION
+    This function disables inactive employees both in Active Directory and Microsoft 365, based on a list of inactive employees retrieved from the payroll system. It also handles exceptions for employees who continue as contractors.
+.PARAMETER None
+    This function does not accept any parameters directly. It relies on the presence of a CSV file named 'Inactive_Employees_Exceptions.csv' to load a list of exceptions.
+.NOTES
+    - This function requires administrative privileges to perform Active Directory and Microsoft 365 operations.
+    - It is recommended to run this function with caution, especially in production environments, as it can disable user accounts and remove licenses.
+    - Use the -WhatIf and -Confirm parameters to simulate actions and confirm them before execution.
+.EXAMPLE
+    Disable-InactiveEmployees
+    - Disables inactive employees based on the default parameters.
+.INPUTS
+    None. This function does not accept input from the pipeline.
+.OUTPUTS
+    None. This function does not output objects.
+.FUNCTIONALITY
+    - Retrieves a list of inactive employees from the payroll system.
+    - Loads exceptions for inactive employees from a CSV file.
+    - Processes each inactive employee:
+        - Logs processing information.
+        - Checks for exceptions and skips processing if found.
+        - Searches for the employee's user in Active Directory.
+        - Removes the user from security groups in Active Directory if applicable.
+        - Disables the user in Active Directory if applicable.
+        - Searches for the user in Microsoft 365.
+        - Removes the user from groups in Microsoft 365 if applicable.
+        - Removes licenses from the user in Microsoft 365 if applicable.
+#>
+
+function Disable-InactiveEmployees {
     # Set SupportsShouldProcess to True, to make -WhatIf and -Confirm accessible
     [CmdletBinding(SupportsShouldProcess=$True, ConfirmImpact="High")]
     param (

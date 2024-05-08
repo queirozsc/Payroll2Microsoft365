@@ -1,4 +1,21 @@
-﻿function Set-ADUSerAttribute {
+﻿<#
+.SYNOPSIS
+    Sets a specific attribute for an Active Directory user.
+.DESCRIPTION
+    This function sets a specific attribute for an Active Directory user specified by the provided ADUser object.
+    If the attribute already has a value, it updates it. If the attribute doesn't have a value, it adds it.
+.PARAMETER ADUser
+    Specifies a PSCustomObject representing the Active Directory user whose attribute is to be set.
+.PARAMETER AttributeName
+    Specifies the name of the attribute to be set for the Active Directory user.
+.PARAMETER AttributeValue
+    Specifies the value to set for the attribute.
+.EXAMPLE
+    $ADUserObject = Get-ADUser -Identity "username"
+    Set-ADUserAttribute -ADUser $ADUserObject -AttributeName "Description" -AttributeValue "New description"
+    Sets the "Description" attribute for the Active Directory user "username" to "New description".
+#>
+function Set-ADUSerAttribute {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory=$True)]

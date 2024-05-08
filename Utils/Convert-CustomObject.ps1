@@ -1,10 +1,13 @@
 ﻿<#
 .SYNOPSIS
-    Converts a custom object in another custom object, based on a mapping table
+    Converts properties of an existing custom object based on a specified mapping table.
 .DESCRIPTION
-    Creates a new custom object with data from an existing object. Column names are changed based on a mapping table
-.NOTES
-    For use with cmdlets, passing an object through the pipeline
+    This function creates a new custom object by mapping properties from an existing custom object to new property names 
+    defined in a hashtable.
+.PARAMETER ExistingObject
+    The existing custom object whose properties are to be mapped.
+.PARAMETER PropertyMapping
+    A hashtable containing the mapping of existing property names to new property names.
 .EXAMPLE
     $employee = [PSCustomObject]@{
         "CodigoColaborador" = 5402945
@@ -17,10 +20,12 @@
     }
 
     $user = Convert-CustomObject -ExistingObject $employee -PropertyMapping $mapping
-    # Create a new object with values:
-    # PostalCode Title
-    # ---------- -----
-    # 5402945 TÉCNICO DE LABORATORIO
+    
+    Create a new object with values:
+
+    PostalCode Title
+    ---------- -----
+    5402945 TÉCNICO DE LABORATORIO
 #>
 function Convert-CustomObject {
     [CmdletBinding()]
