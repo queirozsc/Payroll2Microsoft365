@@ -5,7 +5,7 @@
 Get-PayrollToken -Verbose
 
 # Inactive employees
-# Disable-InactiveEmployees -Verbose
+Disable-InactiveEmployees -Verbose
 
 # Active employees
 Enable-ActiveEmployees -Verbose
